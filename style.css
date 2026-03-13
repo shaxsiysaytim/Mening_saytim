@@ -1,0 +1,125 @@
+:root {
+    --bg-color: #0d0221;
+    --accent-color: #ffd700;
+    --text-main: #ffffff;
+}
+
+* {
+    scroll-behavior: smooth; /* Bo'limlarga yumshoq tushish uchun */
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.aurora-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 20% 30%, #1a0b2e 0%, #0d0221 100%);
+    z-index: -1;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.avatar-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--accent-color), #7a00ff);
+    box-shadow: 0 0 20px rgba(122, 0, 255, 0.3);
+}
+
+.avatar-container img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #222;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 15px 0 5px;
+}
+
+.role {
+    opacity: 0.6;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+/* Grid Menu */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 80px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.card-icon { font-size: 28px; }
+.glass-card h3 { font-size: 16px; margin: 10px 0 5px; }
+.glass-card span { font-size: 11px; opacity: 0.5; }
+
+/* Content Sections */
+.content-section {
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+.content-section h2 {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.glass-content {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 20px;
+    line-height: 1.8;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    .grid-menu { grid-template-columns: 1fr; }
+}
