@@ -1,4 +1,4 @@
-[13.03.2026 12:12] Ozoda: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
@@ -15,9 +15,10 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(-45deg, #ffafbd, #ffc3a0, #ee9ca7, #ba94d1);
+            /* Binafsha va Feruza rangli gradient fon */
+            background: linear-gradient(-45deg, #8e2de2, #4facfe, #00f2fe, #6a11cb);
             background-size: 400% 400%;
-            animation: gradientMove 15s ease infinite;
+            animation: gradientMove 12s ease infinite;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -33,49 +34,56 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 40px;
-            padding: 40px 25px;
+            padding: 40px 30px;
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             text-align: center;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
-            color: #333;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            animation: fadeIn 1.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .avatar {
-            width: 100px;
-            height: 100px;
-            background: white;
+            width: 110px;
+            height: 110px;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 45px;
+            font-size: 50px;
             font-weight: bold;
-            color: #ee9ca7;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
-            color: #2d3436;
-            margin-bottom: 5px;
+            font-size: 26px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
         }
 
-        .description {
-            font-size: 13px;
-            color: #636e72;
-            margin-bottom: 25px;
-            line-height: 1.4;
+        .info {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            line-height: 1.5;
         }
 
-        .links {
+        .links-container {
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -87,42 +95,34 @@
             border-radius: 18px;
             font-weight: 600;
             font-size: 15px;
-            transition: 0.3s all ease;
+            transition: all 0.4s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .btn:hover {
+            background: #fff;
+            color: #6a11cb;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Telegram */
-        .btn-tg {
-            background: #fff;
-            color: #0088cc;
-            border: 1px solid #0088cc;
-        }
-
-        /* Instagram */
-        .btn-inst {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            color: white;
-        }
-
-        /* Email */
-        .btn-email {
-            background: #fff;
-            color: #ea4335;
-            border: 1px solid #ea4335;
-        }
+        /* Alohida rang berish (ixtiyoriy) */
+        .btn-insta:hover { color: #e1306c; }
+        .btn-email:hover { color: #ea4335; }
+        .btn-tg:hover { color: #0088cc; }
 
         footer {
-            margin-top: 30px;
+            margin-top: 35px;
             font-size: 11px;
-            color: #7f8c8d;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -132,20 +132,24 @@
         <div class="avatar">H</div>
 
         <h1>Hasanova Ozodaxon</h1>
-        <p class="description">
+        <p class="info">
             🎓 QarDU Talabasi <br>
             💻 Future Developer & Blogger
         </p>
 
-        <div class="links">
+Telegram (https://t.me/oddiy_ozosh)
+Ozoda
+You can contact @oddiy_ozosh right away.
+<div class="links-container">
             <a href="https://t.me/+im5ImpBRRsI3MmEy" target="_blank" class="btn btn-tg">
                 ✨ Telegram Kanalim
             </a>
-[13.03.2026 12:12] Ozoda: <a href="https://t.me/oddiy_ozosh" target="_blank" class="btn btn-tg" style="border-style: dashed;">
+
+            <a href="https://t.me/oddiy_ozosh" target="_blank" class="btn btn-tg">
                 ✈️ Shaxsiy Telegram
             </a>
             
-            <a href="https://instagram.com/oddiy_ozosh" target="_blank" class="btn btn-inst">
+            <a href="https://instagram.com/oddiy_ozosh" target="_blank" class="btn btn-insta">
                 📸 Instagram
             </a>
 
@@ -155,9 +159,13 @@
         </div>
 
         <footer>
-            CREATED BY OZODAXON &copy; 2026
+            Ozodaxon &copy; 2026
         </footer>
     </div>
 
 </body>
 </html>
+
+Telegram (https://t.me/oddiy_ozosh)
+Ozoda
+You can contact @oddiy_ozosh right away.        
