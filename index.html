@@ -1,11 +1,162 @@
-[13.03.2026 11:08] Gulhayo: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasanova Ozoda - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* BINA fsha VA FERUZA RANG PALITRASI */
+            --bg-color: #0d0221;          /* To'q binafsha asosiy fon */
+            --violet-main: #8a2be2;       /* Binafsha urg'u */
+            --teal-main: #00ced1;         /* Feruza urg'u */
+            --text-main: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Fon effekti: Binafsha va feruza jilolanishi */
+        .aurora-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 15%, rgba(138, 43, 226, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(0, 206, 209, 0.15) 0%, transparent 40%),
+                #0d0221;
+            z-index: -1;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            width: 90%;
+            padding: 40px 0;
+        }
+
+        /* Hero */
+        .hero { text-align: center; margin-bottom: 50px; }
+
+        .avatar-container {
+            width: 140px; height: 140px;
+            margin: 0 auto;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--violet-main), var(--teal-main));
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+        }
+
+        .avatar-container img {
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #1a1a1a;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            margin: 20px 0 5px;
+            background: linear-gradient(to right, #fff, var(--teal-main));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .role {
+            color: var(--teal-main);
+            opacity: 0.8;
+            letter-spacing: 3px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        /* Kartochkalar */
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--teal-main);
+            box-shadow: 0 10px 20px rgba(0, 206, 209, 0.15);
+        }
+
+        .card-icon { font-size: 30px; margin-bottom: 10px; display: block; }
+        .glass-card h3 { font-size: 16px; margin-bottom: 5px; color: var(--violet-main); }
+        .glass-card span { font-size: 11px; opacity: 0.6; }
+/* Bo'limlar */
+        .content-section { padding-top: 80px; margin-bottom: 40px; }
+
+        .content-section h2 {
+            border-left: 5px solid var(--violet-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+        }
+        glass-content {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 25px;
+            line-height: 1.8;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-content b { color: var(--teal-main); }
+
+        /* Kontaktlar */
+        .contact-list { list-style: none; }
+        .contact-list li {
+            margin-bottom: 15px;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-list a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact-list a:hover {
+            color: var(--teal-main);
+            border-bottom-color: var(--teal-main);
+        }
+
+        @media (max-width: 600px) {
+            .grid-menu { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
     <div class="aurora-bg"></div>
@@ -21,19 +172,19 @@
 
         <section class="grid-menu">
             <a href="#biografiya" class="glass-card">
-                <div class="card-icon">✨</div>
+                <span class="card-icon">✨</span>
                 <h3>Biografiya</h3>
                 <span>Men haqimda</span>
             </a>
             <a href="#maqolalar" class="glass-card">
-                <div class="card-icon">📚</div>
+                <span class="card-icon">📚</span>
                 <h3>Maqolalar</h3>
-                <span>Ilmiy tadqiqotlar</span>
+                <span>Tadqiqotlar</span>
             </a>
             <a href="#aloqa" class="glass-card">
-                <div class="card-icon">📩</div>
+                <span class="card-icon">📩</span>
                 <h3>Bog'lanish</h3>
-                <span>Telegram / Email</span>
+                <span>Ijtimoiy tarmoqlar</span>
             </a>
         </section>
 
@@ -41,159 +192,23 @@
             <h2>Men haqimda</h2>
             <div class="glass-content">
                 <p>
-                    Men <b>Hasanova Ozoda</b>, hozirda Qarshi davlat universiteti, 
-                    Kompyuter ilmlari fakulteti, Axborot tizimlari va texnologiyalari yo'nalishi talabasiman.
+                    Men <b>Hasanova Ozoda</b>, Qarshi davlat universiteti, 
+                    Kompyuter ilmlari fakulteti talabasiman. 
+                    Ma'lumotlar tahlili (Data Analysis) va zamonaviy veb-texnologiyalar yo'nalishida o'z loyihalarimni yarataman.
                 </p>
-                <p>
-                    Texnologiyalar dunyosiga bo'lgan qiziqishim meni ma'lumotlar tahlili va zamonaviy 
-                    dasturlash yo'nalishlariga yetaklab keldi. Akademik bilimlarimni amaliy loyihalar 
-                    bilan boyitishga va kelajakda sohamning yetuk mutaxassisi bo'lishga intilaman.
-                </p>
-            </div>
-        </section>
-
-        <section id="maqolalar" class="content-section">
-            <h2>Maqolalar</h2>
-            <div class="glass-content">
-                <p>Tez kunda bu yerda mening ilmiy maqolalarim va tadqiqotlarim ro'yxati paydo bo'ladi.</p>
             </div>
         </section>
 
         <section id="aloqa" class="content-section">
             <h2>Bog'lanish</h2>
             <div class="glass-content">
-                <p>Savollar va takliflar uchun quyidagi usullar orqali bog'lanishingiz mumkin:</p>
                 <ul class="contact-list">
-                    <li>📧 Email: ozoda@example.com</li>
-                    <li>📱 Telegram: @hasanova_ozoda</li>
+                    <li>📧 <b>Email:</b> <a href="mailto:khasanovaozoda213@gmail.com">khasanovaozoda213@gmail.com</a></li>
+                    <li>📱 <b>Telegram:</b> <a href="https://t.me/oddiy_ozosh" target="_blank">@oddiy_ozosh</a></li>
+                    <li>📸 <b>Instagram:</b> <a href="https://instagram.com/oddiy_ozosh" target="_blank">@oddiy_ozosh</a></li>
                 </ul>
             </div>
         </section>
     </main>
 </body>
 </html>
-[13.03.2026 11:08] Gulhayo: :root {
-    --bg-color: #0d0221;
-    --accent-color: #ffd700;
-    --text-main: #ffffff;
-}
-
-* {
-    scroll-behavior: smooth; /* Bo'limlarga yumshoq tushish uchun */
-}
-
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
-}
-
-.aurora-bg {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 20% 30%, #1a0b2e 0%, #0d0221 100%);
-    z-index: -1;
-}
-
-.wrapper {
-    max-width: 800px;
-    width: 90%;
-    padding: 40px 0;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.avatar-container {
-    width: 130px;
-    height: 130px;
-    margin: 0 auto;
-    border-radius: 50%;
-    padding: 3px;
-    background: linear-gradient(135deg, var(--accent-color), #7a00ff);
-    box-shadow: 0 0 20px rgba(122, 0, 255, 0.3);
-}
-
-.avatar-container img {
-    width: 100%; height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    background: #222;
-}
-
-.name {
-    font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    margin: 15px 0 5px;
-}
-
-.role {
-    opacity: 0.6;
-    letter-spacing: 2px;
-    font-size: 14px;
-}
-
-/* Grid Menu */
-.grid-menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 80px;
-}
-
-.glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.glass-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
-}
-
-.card-icon { font-size: 28px; }
-.glass-card h3 { font-size: 16px; margin: 10px 0 5px; }
-.glass-card span { font-size: 11px; opacity: 0.5; }
-
-/* Content Sections */
-.content-section {
-    padding-top: 60px;
-    margin-bottom: 60px;
-}
-
-.content-section h2 {
-    border-left: 4px solid var(--accent-color);
-    padding-left: 15px;
-    margin-bottom: 20px;
-}
-
-.glass-content {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 25px;
-    border-radius: 20px;
-    line-height: 1.8;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.contact-list {
-    list-style: none;
-    padding: 0;
-}
-
-@media (max-width: 600px) {
-    .grid-menu { grid-template-columns: 1fr; }
-}
