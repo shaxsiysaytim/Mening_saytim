@@ -1,171 +1,199 @@
-<!DOCTYPE html>
+[13.03.2026 11:08] Gulhayo: <!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasanova Ozodaxon | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            /* Binafsha va Feruza rangli gradient fon */
-            background: linear-gradient(-45deg, #8e2de2, #4facfe, #00f2fe, #6a11cb);
-            background-size: 400% 400%;
-            animation: gradientMove 12s ease infinite;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            padding: 20px;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 40px;
-            padding: 40px 30px;
-            width: 100%;
-            max-width: 420px;
-            text-align: center;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-            color: #fff;
-            animation: fadeIn 1.2s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .avatar {
-            width: 110px;
-            height: 110px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            font-weight: bold;
-            color: #fff;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
-
-        .info {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .btn {
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 18px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.4s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #fff;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .btn:hover {
-            background: #fff;
-            color: #6a11cb;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        /* Alohida rang berish (ixtiyoriy) */
-        .btn-insta:hover { color: #e1306c; }
-        .btn-email:hover { color: #ea4335; }
-        .btn-tg:hover { color: #0088cc; }
-
-        footer {
-            margin-top: 35px;
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.6);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-    </style>
+    <title>Hasanova Ozoda - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="aurora-bg"></div>
 
-    <div class="card">
-        <div class="avatar">H</div>
+    <main class="wrapper">
+        <section class="hero">
+            <div class="avatar-container">
+                <img src="https://via.placeholder.com/150" alt="Hasanova Ozoda">
+            </div>
+            <h1 class="name">Hasanova Ozoda</h1>
+            <p class="role">Data Analyst & Developer</p>
+        </section>
 
-        <h1>Hasanova Ozodaxon</h1>
-        <p class="info">
-            🎓 QarDU Talabasi <br>
-            💻 Future Developer & Blogger
-        </p>
-
-Telegram (https://t.me/oddiy_ozosh)
-Ozoda
-You can contact @oddiy_ozosh right away.
-<div class="links-container">
-            <a href="https://t.me/+im5ImpBRRsI3MmEy" target="_blank" class="btn btn-tg">
-                ✨ Telegram Kanalim
+        <section class="grid-menu">
+            <a href="#biografiya" class="glass-card">
+                <div class="card-icon">✨</div>
+                <h3>Biografiya</h3>
+                <span>Men haqimda</span>
             </a>
-
-            <a href="https://t.me/oddiy_ozosh" target="_blank" class="btn btn-tg">
-                ✈️ Shaxsiy Telegram
+            <a href="#maqolalar" class="glass-card">
+                <div class="card-icon">📚</div>
+                <h3>Maqolalar</h3>
+                <span>Ilmiy tadqiqotlar</span>
             </a>
-            
-            <a href="https://instagram.com/oddiy_ozosh" target="_blank" class="btn btn-insta">
-                📸 Instagram
+            <a href="#aloqa" class="glass-card">
+                <div class="card-icon">📩</div>
+                <h3>Bog'lanish</h3>
+                <span>Telegram / Email</span>
             </a>
+        </section>
 
-            <a href="mailto:khasanovaozoda213@gmail.com" class="btn btn-email">
-                📧 Email yuborish
-            </a>
-        </div>
+        <section id="biografiya" class="content-section">
+            <h2>Men haqimda</h2>
+            <div class="glass-content">
+                <p>
+                    Men <b>Hasanova Ozoda</b>, hozirda Qarshi davlat universiteti, 
+                    Kompyuter ilmlari fakulteti, Axborot tizimlari va texnologiyalari yo'nalishi talabasiman.
+                </p>
+                <p>
+                    Texnologiyalar dunyosiga bo'lgan qiziqishim meni ma'lumotlar tahlili va zamonaviy 
+                    dasturlash yo'nalishlariga yetaklab keldi. Akademik bilimlarimni amaliy loyihalar 
+                    bilan boyitishga va kelajakda sohamning yetuk mutaxassisi bo'lishga intilaman.
+                </p>
+            </div>
+        </section>
 
-        <footer>
-            Ozodaxon &copy; 2026
-        </footer>
-    </div>
+        <section id="maqolalar" class="content-section">
+            <h2>Maqolalar</h2>
+            <div class="glass-content">
+                <p>Tez kunda bu yerda mening ilmiy maqolalarim va tadqiqotlarim ro'yxati paydo bo'ladi.</p>
+            </div>
+        </section>
 
+        <section id="aloqa" class="content-section">
+            <h2>Bog'lanish</h2>
+            <div class="glass-content">
+                <p>Savollar va takliflar uchun quyidagi usullar orqali bog'lanishingiz mumkin:</p>
+                <ul class="contact-list">
+                    <li>📧 Email: ozoda@example.com</li>
+                    <li>📱 Telegram: @hasanova_ozoda</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
+[13.03.2026 11:08] Gulhayo: :root {
+    --bg-color: #0d0221;
+    --accent-color: #ffd700;
+    --text-main: #ffffff;
+}
 
-Telegram (https://t.me/oddiy_ozosh)
-Ozoda
-You can contact @oddiy_ozosh right away.        
+* {
+    scroll-behavior: smooth; /* Bo'limlarga yumshoq tushish uchun */
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.aurora-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 20% 30%, #1a0b2e 0%, #0d0221 100%);
+    z-index: -1;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.avatar-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--accent-color), #7a00ff);
+    box-shadow: 0 0 20px rgba(122, 0, 255, 0.3);
+}
+
+.avatar-container img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #222;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 15px 0 5px;
+}
+
+.role {
+    opacity: 0.6;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+/* Grid Menu */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 80px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.card-icon { font-size: 28px; }
+.glass-card h3 { font-size: 16px; margin: 10px 0 5px; }
+.glass-card span { font-size: 11px; opacity: 0.5; }
+
+/* Content Sections */
+.content-section {
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+.content-section h2 {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.glass-content {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 20px;
+    line-height: 1.8;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    .grid-menu { grid-template-columns: 1fr; }
+}
