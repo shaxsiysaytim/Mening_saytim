@@ -1,74 +1,163 @@
-<!DOCTYPE html>
+[13.03.2026 12:12] Ozoda: <!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasanova Ozoda - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Hasanova Ozodaxon | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #ffafbd, #ffc3a0, #ee9ca7, #ba94d1);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 40px;
+            padding: 40px 25px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            font-weight: bold;
+            color: #ee9ca7;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            color: #2d3436;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            font-size: 13px;
+            color: #636e72;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 18px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s all ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Telegram */
+        .btn-tg {
+            background: #fff;
+            color: #0088cc;
+            border: 1px solid #0088cc;
+        }
+
+        /* Instagram */
+        .btn-inst {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+
+        /* Email */
+        .btn-email {
+            background: #fff;
+            color: #ea4335;
+            border: 1px solid #ea4335;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #7f8c8d;
+        }
+    </style>
 </head>
 <body>
-    <div class="aurora-bg"></div>
 
-    <main class="wrapper">
-        <section class="hero">
-            <div class="avatar-container">
-                <img src="https://via.placeholder.com/150" alt="Hasanova Ozoda">
-            </div>
-            <h1 class="name">Hasanova Ozoda</h1>
-            <p class="role">Data Analyst & Developer</p>
-        </section>
+    <div class="card">
+        <div class="avatar">H</div>
 
-        <section class="grid-menu">
-            <a href="#biografiya" class="glass-card">
-                <div class="card-icon">✨</div>
-                <h3>Biografiya</h3>
-                <span>Men haqimda</span>
+        <h1>Hasanova Ozodaxon</h1>
+        <p class="description">
+            🎓 QarDU Talabasi <br>
+            💻 Future Developer & Blogger
+        </p>
+
+        <div class="links">
+            <a href="https://t.me/+im5ImpBRRsI3MmEy" target="_blank" class="btn btn-tg">
+                ✨ Telegram Kanalim
             </a>
-            <a href="#maqolalar" class="glass-card">
-                <div class="card-icon">📚</div>
-                <h3>Maqolalar</h3>
-                <span>Ilmiy tadqiqotlar</span>
+[13.03.2026 12:12] Ozoda: <a href="https://t.me/oddiy_ozosh" target="_blank" class="btn btn-tg" style="border-style: dashed;">
+                ✈️ Shaxsiy Telegram
             </a>
-            <a href="#aloqa" class="glass-card">
-                <div class="card-icon">📩</div>
-                <h3>Bog'lanish</h3>
-                <span>Telegram / Email</span>
+            
+            <a href="https://instagram.com/oddiy_ozosh" target="_blank" class="btn btn-inst">
+                📸 Instagram
             </a>
-        </section>
 
-        <section id="biografiya" class="content-section">
-            <h2>Men haqimda</h2>
-            <div class="glass-content">
-                <p>
-                    Men <b>Hasanova Ozoda</b>, hozirda Qarshi davlat universiteti, 
-                    Kompyuter ilmlari fakulteti, Axborot tizimlari va texnologiyalari yo'nalishi talabasiman.
-                </p>
-                <p>
-                    Texnologiyalar dunyosiga bo'lgan qiziqishim meni ma'lumotlar tahlili va zamonaviy 
-                    dasturlash yo'nalishlariga yetaklab keldi. Akademik bilimlarimni amaliy loyihalar 
-                    bilan boyitishga va kelajakda sohamning yetuk mutaxassisi bo'lishga intilaman.
-                </p>
-            </div>
-        </section>
+            <a href="mailto:khasanovaozoda213@gmail.com" class="btn btn-email">
+                📧 Email yuborish
+            </a>
+        </div>
 
-        <section id="maqolalar" class="content-section">
-            <h2>Maqolalar</h2>
-            <div class="glass-content">
-                <p>Tez kunda bu yerda mening ilmiy maqolalarim va tadqiqotlarim ro'yxati paydo bo'ladi.</p>
-            </div>
-        </section>
+        <footer>
+            CREATED BY OZODAXON &copy; 2026
+        </footer>
+    </div>
 
-        <section id="aloqa" class="content-section">
-            <h2>Bog'lanish</h2>
-            <div class="glass-content">
-                <p>Savollar va takliflar uchun quyidagi usullar orqali bog'lanishingiz mumkin:</p>
-                <ul class="contact-list">
-                    <li>📧 Email: ozoda@example.com</li>
-                    <li>📱 Telegram: @hasanova_ozoda</li>
-                </ul>
-            </div>
-        </section>
-    </main>
 </body>
 </html>
