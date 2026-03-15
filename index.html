@@ -1,79 +1,109 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mening Portfolio Saytim</title>
+<title>Ozodaxon sayti</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
+
+<!-- musiqa -->
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<nav>
+<h2>Ozodaxon</h2>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">Men haqimda</a></li>
+<li><a href="#gallery">Rasmlar</a></li>
+<li><a href="#sites">Foydali saytlar</a></li>
+<li><a href="#contact">Aloqa</a></li>
+</ul>
+
+</nav>
+
 
 <header>
 
-<img src="profile.jpg" class="profile">
-
-<h1>Salom 👋</h1>
-
-<p>Men dasturchiman. Web dasturlashni o‘rganayapman.</p>
+<h1>Salom Ozodaxon saytiga xush kelibsiz</h1>
+<p>Qarshi davlat universiteti talabasi</p>
 
 </header>
 
 
-<section class="music">
+<section id="about">
 
-<h2>🎵 Mening musiqam</h2>
+<h2>Men haqimda</h2>
 
-<audio controls>
-<source src="music.mp3" type="audio/mpeg">
-</audio>
-
-</section>
-
-
-<section class="gallery">
-
-<h2>🖼 Rasmlar</h2>
-
-<img src="rasm1.jpg">
-<img src="rasm2.jpg">
-<img src="rasm3.jpg">
+<p>
+Men matematika, dasturlash va she'r yozishga qiziqaman.
+Kelajakda kuchli dasturchi bo'lishni xohlayman.
+</p>
 
 </section>
 
 
-<section class="articles">
+<section id="gallery">
 
-<h2>📝 Maqolalarim</h2>
+<h2>Menga mos rasmlar</h2>
 
-<div class="card">
+<div class="rasmlar">
 
-<h3>HTML nima?</h3>
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4">
 
-<p>HTML bu web sahifa yaratish uchun ishlatiladigan til.</p>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 
-</div>
-
-<div class="card">
-
-<h3>CSS nima?</h3>
-
-<p>CSS sayt dizaynini chiroyli qilish uchun ishlatiladi.</p>
+<img src="https://images.unsplash.com/photo-1508780709619-79562169bc64">
 
 </div>
+
+</section>
+
+
+<section id="sites">
+
+<h2>ITchilar uchun foydali saytlar</h2>
+
+<ul class="links">
+
+<li><a href="https://github.com">GitHub</a></li>
+
+<li><a href="https://stackoverflow.com">Stack Overflow</a></li>
+
+<li><a href="https://www.w3schools.com">W3Schools</a></li>
+
+<li><a href="https://codepen.io">CodePen</a></li>
+
+</ul>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Aloqa</h2>
+
+<p>Email: khasanovaozoda213@gmail.com</p>
+
+<p>Telegram: oddiy_ozosh</p>
 
 </section>
 
 
 <footer>
 
-<p>© 2026 Mening saytim</p>
+<p>© 2026 Ozodaxon</p>
 
 </footer>
 
 </body>
-</html>
+</html> 
+<button onclick="document.getElementById('about').scrollIntoView()">
+Men haqimda
+</button>
