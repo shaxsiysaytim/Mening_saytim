@@ -3,82 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ozodaxon Blogi</title>
+<title>Ozodaxon Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Fon musiqasi -->
-<audio autoplay loop>
-  <source src="music.mp3" type="audio/mpeg">
+<!-- Loader -->
+<div id="loader">Yuklanmoqda...</div>
+
+<!-- Musiqa -->
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
 </audio>
+
+<!-- Tugmalar -->
+<div class="controls">
+<button onclick="toggleMusic()">🎵</button>
+<button onclick="toggleTheme()">🌙</button>
+</div>
 
 <!-- Menu -->
 <nav>
-  <h2>Ozodaxon</h2>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#about">Men haqimda</a></li>
-    <li><a href="#gallery">Galereya</a></li>
-    <li><a href="#sites">IT saytlar</a></li>
-    <li><a href="#contact">Aloqa</a></li>
-  </ul>
+<h2>Ozodaxon</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">Men haqimda</a></li>
+<li><a href="#cards">Faoliyat</a></li>
+<li><a href="#contact">Aloqa</a></li>
+</ul>
 </nav>
 
-<!-- Header -->
-<header>
-  <h1 class="salom">Salom saytimga xush kelibsiz</h1>
-  <p>Bu mening shaxsiy blogim</p>
+<!-- Hero -->
+<header class="hero">
+<h1 id="typing"></h1>
+<p>Bu mening shaxsiy portfolio va blog sahifam</p>
+<button onclick="scrollToSection()">Boshlash</button> 
+<a href="#contact" class="hire-btn">Men bilan ishlang</a>
 </header>
 
-<!-- Men haqimda -->
-<section id="about">
-  <h2>Men haqimda</h2>
-  <p>
-    Men Qarshi davlat universiteti talabasi Ozodaxonman. 
-    Matematika, dasturlash va ijod bilan shug‘ullanishni yaxshi ko‘raman. 
-    Kelajakda kuchli dasturchi bo‘lishni va o‘z loyihalarim orqali insonlarga foyda keltiradigan dasturlar yaratishni xohlayman.
-  </p>
-  <p>
-    Bu sayt mening shaxsiy blogim bo‘lib, unda men o‘z fikrlarim, o‘rganayotgan bilimlarim va qiziqarli loyihalarim haqida yozib boraman.
-  </p>
+<!-- About -->
+<section id="about" class="hidden">
+<h2>Men haqimda</h2>
+
+<p>
+Men Ozodaxon, Qarshi davlat universiteti talabasi. 
+Dasturlash, matematika va kreativ loyihalar bilan shug‘ullanaman.
+</p>
+
+<p>
+Kelajakda kuchli dasturchi bo‘lish va parfumeriya hamda freelancing orqali daromad topishni maqsad qilganman.
+</p>
+
 </section>
 
-<!-- Galereya -->
-<section id="gallery">
-  <h2>Galereya</h2>
-  <div class="rasmlar">
-    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4">
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-    <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64">
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-  </div>
+<!-- Cards -->
+<section id="cards" class="hidden">
+<h2>Faoliyatim</h2>
+
+<div class="card-box">
+
+<div class="card">
+<h3>💻 Dasturlash</h3>
+<p>Web saytlar yaratish va yangi texnologiyalarni o‘rganish.</p>
+</div>
+
+<div class="card">
+<h3>🌸 Parfumeriya</h3>
+<p>Atirlar va hidlar olamiga qiziqaman.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Freelancing</h3>
+<p>Mustaqil ishlash va daromad qilish yo‘lida rivojlanmoqdaman.</p>
+</div>
+
+</div>
 </section>
 
-<!-- IT saytlar -->
-<section id="sites">
-  <h2>ITchilar uchun foydali saytlar</h2>
-  <ul class="links">
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="https://stackoverflow.com">Stack Overflow</a></li>
-    <li><a href="https://www.w3schools.com">W3Schools</a></li>
-    <li><a href="https://codepen.io">CodePen</a></li>
-  </ul>
-</section>
+<!-- Contact -->
+<section id="contact" class="hidden">
+<h2>Aloqa</h2>
 
-<!-- Aloqa -->
-<section id="contact">
-  <h2>Aloqa</h2>
-  <p>Email: khasanovaozoda213@gmail.com</p>
-  <p>Telegram: oddiy_ozosh</p>
+<p>Email: khasanovaozoda213@gmail.com</p>
+<p>Telegram: oddiy_ozosh</p>
+<p>Instagram: @oddiy_ozosh</p>
+
 </section>
 
 <footer>
-  <p>© 2026 Ozodaxon</p>
+<p>© 2026 Ozodaxon</p>
 </footer>
+
+<script>
+
+// Loader
+window.onload = () => {
+document.getElementById("loader").style.display="none";
+}
+
+// Typing effect
+let text = "Salom saytimga xush kelibsiz";
+let i = 0;
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,50);
+}
+}
+typing();
+
+// Scroll
+function scrollToSection(){
+document.getElementById("about").scrollIntoView({behavior:"smooth"});
+}
+
+// Scroll animatsiya
+const elements = document.querySelectorAll(".hidden");
+window.addEventListener("scroll", ()=>{
+elements.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight - 100){
+el.classList.add("show");
+}
+});
+});
+
+// Cursor yulduz
+document.addEventListener("mousemove",(e)=>{
+let star=document.createElement("div");
+star.className="star";
+star.style.left=e.pageX+"px";
+star.style.top=e.pageY+"px";
+document.body.appendChild(star);
+setTimeout(()=>star.remove(),1000);
+});
+
+// Music
+function toggleMusic(){
+let music=document.getElementById("music");
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+}
+
+// Theme
+function toggleTheme(){
+document.body.classList.toggle("light");
+}
+
+</script>
 
 </body>
 </html>
