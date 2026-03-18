@@ -9,43 +9,6 @@ body{
 background:#0f0026;
 color:white;
 text-align:center;
-overflow-x:hidden;
-transition:0.5s;
-}
-
-/* Light mode */
-body.light{
-background:white;
-color:black;
-}
-
-/* Loader */
-#loader{
-position:fixed;
-width:100%;
-height:100%;
-background:#0f0026;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:30px;
-z-index:999;
-}
-
-/* Controls */
-.controls{
-position:fixed;
-top:20px;
-right:20px;
-z-index:1000;
-}
-
-.controls button{
-margin:5px;
-padding:10px;
-border:none;
-border-radius:50%;
-cursor:pointer;
 }
 
 /* Menu */
@@ -65,11 +28,6 @@ nav ul li{
 margin:10px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-}
-
 /* Hero */
 .hero{
 height:100vh;
@@ -80,111 +38,79 @@ align-items:center;
 background:linear-gradient(135deg,#7b1fa2,#00e5ff);
 }
 
-.hero h1{
-font-size:45px;
-}
-
-.hero button{
+/* Button */
+.hire-btn{
 margin-top:20px;
-padding:10px 20px;
-border:none;
-border-radius:10px;
-background:#00e5ff;
-box-shadow:0 0 20px #00e5ff,0 0 40px #7b1fa2;
-cursor:pointer;
+padding:12px 30px;
+border-radius:30px;
+background:linear-gradient(45deg,#00e5ff,#7b1fa2);
+color:white;
+text-decoration:none;
 }
 
-.hero button:hover{
-transform:scale(1.1);
+/* Sections */
+section{
+padding:60px 20px;
 }
 
-/* About */
-#about{
-width:70%;
-margin:auto;
-padding:40px;
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
-border-radius:20px;
-margin-top:-80px;
-}
-
-/* Cards */
-.card-box{
+/* Stats */
+.stats-box{
 display:flex;
-gap:20px;
 justify-content:center;
-flex-wrap:wrap;
+gap:30px;
 }
 
-.card{
-width:250px;
-padding:20px;
+.stat{
 background:rgba(255,255,255,0.1);
-border-radius:20px;
-transition:0.4s;
+padding:20px;
+border-radius:15px;
 }
 
-.card:hover{
-transform:translateY(-10px) scale(1.05);
+/* Gallery */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+width:80%;
+margin:auto;
 }
 
-/* Hidden anim */
-.hidden{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
+.gallery img{
+width:100%;
+border-radius:15px;
 }
 
-.show{
-opacity:1;
-transform:translateY(0);
+/* Books */
+.books{
+list-style:none;
 }
 
-/* Cursor */
-.star{
-position:absolute;
-width:5px;
-height:5px;
-background:white;
-border-radius:50%;
-animation:fade 1s linear;
-}
-
-@keyframes fade{
-to{opacity:0; transform:translateY(-20px);}
+.books li{
+margin:10px;
 }
 
 /* Responsive */
 @media(max-width:768px){
-.hero h1{
-font-size:28px;
-}
-.card-box{
+.stats-box{
 flex-direction:column;
-align-items:center;
-}
-#about{
-width:90%;
 }
 } 
-.hire-btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 30px;
-border-radius:30px;
+.trail{
+position:absolute;
+width:8px;
+height:8px;
+border-radius:50%;
+pointer-events:none;
 
-background:linear-gradient(45deg,#00e5ff,#7b1fa2);
-color:white;
-text-decoration:none;
-font-size:18px;
+background:radial-gradient(circle,#00e5ff,#7b1fa2);
+opacity:0.8;
 
-box-shadow:0 0 20px #00e5ff,0 0 40px #7b1fa2;
-
-transition:0.4s;
+animation:fadeOut 0.8s linear forwards;
 }
 
-.hire-btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 40px #00e5ff,0 0 80px #7b1fa2;
+@keyframes fadeOut{
+to{
+opacity:0;
+transform:scale(2);
+}
 }
