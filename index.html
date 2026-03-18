@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ozodaxon Portfolio</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,7 +25,6 @@
 <header class="hero">
 <h1>Salom saytimga xush kelibsiz</h1>
 <p>Portfolio va shaxsiy blog</p>
-
 <a href="https://t.me/oddiy_ozosh" target="_blank" class="hire-btn">
 Men bilan ishlang
 </a>
@@ -36,7 +34,7 @@ Men bilan ishlang
 <section id="about">
 <h2>Men haqimda</h2>
 <p>
-Men Ozodaxon, dasturlash va kreativ yo‘nalishlarda rivojlanayotgan talaba.
+Men Ozodaxon, dasturlash va kreativ yo‘nalishlarda rivojlanayotgan talaba.  
 Kelajakda freelancing va parfumeriya orqali o‘z brendimni yaratmoqchiman.
 </p>
 </section>
@@ -44,94 +42,68 @@ Kelajakda freelancing va parfumeriya orqali o‘z brendimni yaratmoqchiman.
 <!-- Stats -->
 <section id="stats">
 <h2>Natijalarim</h2>
-
 <div class="stats-box">
-<div class="stat">
-<h3>5+ yil</h3>
-<p>Tajriba</p>
+<div class="stat"><h3>5+ yil</h3><p>Tajriba</p></div>
+<div class="stat"><h3>20+</h3><p>Mijozlar</p></div>
+<div class="stat"><h3>30+</h3><p>Loyihalar</p></div>
 </div>
-
-<div class="stat">
-<h3>20+</h3>
-<p>Mijozlar</p>
-</div>
-
-<div class="stat">
-<h3>30+</h3>
-<p>Loyihalar</p>
-</div>
-</div>
-
 </section>
 
 <!-- Parfumeriya -->
 <section id="perfume">
 <h2>Parfumeriya</h2>
-
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f">
-<img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de">
-<img src="https://images.unsplash.com/photo-1585386959984-a4155223f0ad">
+<img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f" alt="Atir1">
+<img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de" alt="Atir2">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155223f0ad" alt="Atir3">
 </div>
-
 </section>
 
 <!-- IT -->
 <section id="it">
 <h2>Dasturlash</h2>
-
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="IT1">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="IT2">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="IT3">
+<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="IT4">
 </div>
-
 </section>
 
 <!-- Books -->
 <section id="books">
 <h2>O‘qigan kitoblarim</h2>
-
 <ul class="books">
-<li>📘 Atomic Habits</li>
-<li>📗 Rich Dad Poor Dad</li>
-<li>📕 Ikigai</li>
-<li>📙 Think and Grow Rich</li>
+<li>📘 Alisher Navoiy – Xamsa</li>
+<li>📗 Abdulla Qodiriy – O‘tkan kunlar</li>
+<li>📕 Cho‘lpon – Kecha va kunduz</li>
+<li>📙 Mirtemir – Tanlangan asarlar</li>
 </ul>
-
 </section>
 
 <!-- Contact -->
 <section id="contact">
 <h2>Aloqa</h2>
-
 <p>Email: khasanovaozoda213@gmail.com</p>
 <p>Telegram: oddiy_ozosh</p>
 <p>Instagram: @oddiy_ozosh</p>
-
 </section>
 
 <footer>
 <p>© 2026 Ozodaxon</p>
 </footer>
 
-</body> 
-  <script>
-document.addEventListener("mousemove", (e)=>{
-
-let dot = document.createElement("div");
-dot.className = "trail";
-
-dot.style.left = e.pageX + "px";
-dot.style.top = e.pageY + "px";
-
+<!-- Cursor trail JS -->
+<script>
+document.addEventListener("mousemove",(e)=>{
+let dot=document.createElement("div");
+dot.className="trail";
+dot.style.left=e.pageX+"px";
+dot.style.top=e.pageY+"px";
 document.body.appendChild(dot);
-
-setTimeout(()=>{
-dot.remove();
-},800);
-
+setTimeout(()=>dot.remove(),800);
 });
 </script>
+
+</body>
 </html>
