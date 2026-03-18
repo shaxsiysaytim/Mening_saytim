@@ -10,80 +10,100 @@
 
 <body>
 
-<!-- Loader -->
-<div id="loader">Yuklanmoqda...</div>
-
-<!-- Musiqa -->
-<audio id="music" loop>
-<source src="music.mp3" type="audio/mpeg">
-</audio>
-
-<!-- Tugmalar -->
-<div class="controls">
-<button onclick="toggleMusic()">🎵</button>
-<button onclick="toggleTheme()">🌙</button>
-</div>
-
-<!-- Menu -->
 <nav>
 <h2>Ozodaxon</h2>
 <ul>
 <li><a href="#">Home</a></li>
 <li><a href="#about">Men haqimda</a></li>
-<li><a href="#cards">Faoliyat</a></li>
+<li><a href="#stats">Natijalar</a></li>
+<li><a href="#perfume">Parfumeriya</a></li>
+<li><a href="#it">Dasturlash</a></li>
+<li><a href="#books">Kitoblar</a></li>
 <li><a href="#contact">Aloqa</a></li>
 </ul>
 </nav>
 
-<!-- Hero -->
 <header class="hero">
-<h1 id="typing"></h1>
-<p>Bu mening shaxsiy portfolio va blog sahifam</p>
-<button onclick="scrollToSection()">Boshlash</button> 
-<a href="#contact" class="hire-btn">Men bilan ishlang</a>
+<h1>Salom saytimga xush kelibsiz</h1>
+<p>Portfolio va shaxsiy blog</p>
+
+<a href="https://t.me/oddiy_ozosh" target="_blank" class="hire-btn">
+Men bilan ishlang
+</a>
 </header>
 
 <!-- About -->
-<section id="about" class="hidden">
+<section id="about">
 <h2>Men haqimda</h2>
-
 <p>
-Men Ozodaxon, Qarshi davlat universiteti talabasi. 
-Dasturlash, matematika va kreativ loyihalar bilan shug‘ullanaman.
+Men Ozodaxon, dasturlash va kreativ yo‘nalishlarda rivojlanayotgan talaba.
+Kelajakda freelancing va parfumeriya orqali o‘z brendimni yaratmoqchiman.
 </p>
+</section>
 
-<p>
-Kelajakda kuchli dasturchi bo‘lish va parfumeriya hamda freelancing orqali daromad topishni maqsad qilganman.
-</p>
+<!-- Stats -->
+<section id="stats">
+<h2>Natijalarim</h2>
+
+<div class="stats-box">
+<div class="stat">
+<h3>5+ yil</h3>
+<p>Tajriba</p>
+</div>
+
+<div class="stat">
+<h3>20+</h3>
+<p>Mijozlar</p>
+</div>
+
+<div class="stat">
+<h3>30+</h3>
+<p>Loyihalar</p>
+</div>
+</div>
 
 </section>
 
-<!-- Cards -->
-<section id="cards" class="hidden">
-<h2>Faoliyatim</h2>
+<!-- Parfumeriya -->
+<section id="perfume">
+<h2>Parfumeriya</h2>
 
-<div class="card-box">
-
-<div class="card">
-<h3>💻 Dasturlash</h3>
-<p>Web saytlar yaratish va yangi texnologiyalarni o‘rganish.</p>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f">
+<img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155223f0ad">
 </div>
 
-<div class="card">
-<h3>🌸 Parfumeriya</h3>
-<p>Atirlar va hidlar olamiga qiziqaman.</p>
+</section>
+
+<!-- IT -->
+<section id="it">
+<h2>Dasturlash</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
 </div>
 
-<div class="card">
-<h3>🚀 Freelancing</h3>
-<p>Mustaqil ishlash va daromad qilish yo‘lida rivojlanmoqdaman.</p>
-</div>
+</section>
 
-</div>
+<!-- Books -->
+<section id="books">
+<h2>O‘qigan kitoblarim</h2>
+
+<ul class="books">
+<li>📘 Atomic Habits</li>
+<li>📗 Rich Dad Poor Dad</li>
+<li>📕 Ikigai</li>
+<li>📙 Think and Grow Rich</li>
+</ul>
+
 </section>
 
 <!-- Contact -->
-<section id="contact" class="hidden">
+<section id="contact">
 <h2>Aloqa</h2>
 
 <p>Email: khasanovaozoda213@gmail.com</p>
@@ -96,66 +116,22 @@ Kelajakda kuchli dasturchi bo‘lish va parfumeriya hamda freelancing orqali dar
 <p>© 2026 Ozodaxon</p>
 </footer>
 
-<script>
+</body> 
+  <script>
+document.addEventListener("mousemove", (e)=>{
 
-// Loader
-window.onload = () => {
-document.getElementById("loader").style.display="none";
-}
+let dot = document.createElement("div");
+dot.className = "trail";
 
-// Typing effect
-let text = "Salom saytimga xush kelibsiz";
-let i = 0;
-function typing(){
-if(i < text.length){
-document.getElementById("typing").innerHTML += text.charAt(i);
-i++;
-setTimeout(typing,50);
-}
-}
-typing();
+dot.style.left = e.pageX + "px";
+dot.style.top = e.pageY + "px";
 
-// Scroll
-function scrollToSection(){
-document.getElementById("about").scrollIntoView({behavior:"smooth"});
-}
+document.body.appendChild(dot);
 
-// Scroll animatsiya
-const elements = document.querySelectorAll(".hidden");
-window.addEventListener("scroll", ()=>{
-elements.forEach(el=>{
-if(el.getBoundingClientRect().top < window.innerHeight - 100){
-el.classList.add("show");
-}
+setTimeout(()=>{
+dot.remove();
+},800);
+
 });
-});
-
-// Cursor yulduz
-document.addEventListener("mousemove",(e)=>{
-let star=document.createElement("div");
-star.className="star";
-star.style.left=e.pageX+"px";
-star.style.top=e.pageY+"px";
-document.body.appendChild(star);
-setTimeout(()=>star.remove(),1000);
-});
-
-// Music
-function toggleMusic(){
-let music=document.getElementById("music");
-if(music.paused){
-music.play();
-}else{
-music.pause();
-}
-}
-
-// Theme
-function toggleTheme(){
-document.body.classList.toggle("light");
-}
-
 </script>
-
-</body>
 </html>
