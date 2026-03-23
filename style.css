@@ -3,6 +3,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #6a0dad, #00c9a7);
   color: white;
+  scroll-behavior: smooth;
 }
 
 /* MENU */
@@ -10,39 +11,41 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px 40px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.6);
+  position: sticky;
+  top: 0;
 }
 
 nav ul {
   display: flex;
-  list-style: none;
   gap: 20px;
+  list-style: none;
 }
 
 nav a {
   color: white;
-  text-decoration: none;
   font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00c9a7;
 }
 
 /* HEADER */
 header h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
 }
 
 /* SECTION */
 section {
   margin: 30px;
-  padding: 20px;
+  padding: 25px;
   border: 2px solid white;
   border-radius: 15px;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  font-size: 22px;
+  background: rgba(0,0,0,0.3);
 }
 
 /* GRID */
@@ -54,13 +57,18 @@ section {
 }
 
 .grid img {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 15px;
   object-fit: cover;
+  transition: 0.3s;
 }
 
-/* STATS */
+.grid img:hover {
+  transform: scale(1.1);
+}
+
+/* STAT */
 .stats {
   display: flex;
   justify-content: space-around;
@@ -73,7 +81,7 @@ section {
   font-size: 20px;
 }
 
-/* SITES */
+/* LINKS */
 .sites a {
   padding: 10px 15px;
   border: 2px solid white;
@@ -89,7 +97,7 @@ section {
   margin: 10px;
   background: #6a0dad;
   border-radius: 10px;
-  color: white;
-  text-decoration: none;
   font-size: 18px;
+  text-decoration: none;
+  color: white;
 }
