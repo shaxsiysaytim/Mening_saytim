@@ -3,85 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozodaxon | Shaxsiy Portfolio</title>
+  <title>Ozodaxon | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<audio autoplay loop><source src="https://files.catbox.moe/9z7x1y.mp3" type="audio/mpeg"></audio>
+
 <nav>
   <div class="logo">OZODAXON</div>
-  <ul>
-    <li><a href="#home">Asosiy</a></li>
-    <li><a href="#about">Men haqimda</a></li>
-    <li><a href="#portfolio">Loyiha</a></li>
-    <li><a href="#books">Kitoblar</a></li>
-    <li><a href="#contact">Aloqa</a></li>
+  <ul class="nav-links">
+    <li><a href="#home" class="lang" data-uz="Asosiy" data-en="Home">Asosiy</a></li>
+    <li><a href="#about" class="lang" data-uz="Men haqimda" data-en="About">Men haqimda</a></li>
+    <li><a href="#portfolio" class="lang" data-uz="Galereya" data-en="Gallery">Galereya</a></li>
+    <li><a href="#books" class="lang" data-uz="Kutubxona" data-en="Library">Kutubxona</a></li>
   </ul>
+  <button id="lang-btn" class="lang-toggle">EN</button>
 </nav>
 
 <header id="home">
   <div class="hero-content">
-    <h1>Hasanova Ozoda</h1>
-    <p class="slogan">"Kelajakni bugun yaratamiz — kod va nafosat uyg'unligida."</p>
-    <a href="#portfolio" class="main-btn">Ishlarimni ko'rish</a>
+    <h1 class="lang" data-uz="Hasanova Ozoda" data-en="Hasanova Ozoda">Hasanova Ozoda</h1>
+    <p class="slogan lang" data-uz='"Kelajakni bugun yaratamiz — kod va nafosat uyg&apos;unligida."' data-en='"Creating the future today — in harmony of code and elegance."'>"Kelajakni bugun yaratamiz — kod va nafosat uyg'unligida."</p>
   </div>
 </header>
 
 <section id="about">
-  <div class="container">
-    <h2>Men haqimda</h2>
-    <p>Men Axborot tizimlari va texnologiyalari yo'nalishi talabasiman. Frontend dasturlashga bo'lgan qiziqishimni tadbirkorlik va parfumerya olami bilan birlashtiraman.</p>
-    <div class="stats-grid">
-      <div class="stat-card"><span>5+</span><br>Loyiha</div>
-      <div class="stat-card"><span>200+</span><br>Mijoz</div>
-      <div class="stat-card"><span>100+</span><br>Mutolaa</div>
-    </div>
+  <h2 class="lang" data-uz="Men haqimda" data-en="About Me">Men haqimda</h2>
+  <div class="about-text">
+    <p class="lang" 
+       data-uz="Men Qarshi davlat universiteti talabasiman. Frontend dasturlash va parfumerya olami bilan shug'ullanaman." 
+       data-en="I am a student at Karshi State University. I am passionate about Frontend development and the world of perfumery.">
+       Men Qarshi davlat universiteti talabasiman. Frontend dasturlash va parfumerya olami bilan shug'ullanaman.
+    </p>
   </div>
 </section>
 
 <section id="portfolio">
-  <h2>Portfolio</h2>
+  <h2 class="lang" data-uz="Galereya" data-en="Gallery">Galereya</h2>
   <div class="work-grid">
-    <div class="work-item">
-      <img src="https://images.unsplash.com/photo-1583523414454-0563d76bc61a?auto=format&fit=crop&w=500" alt="Parfumerya">
-      <div class="overlay"><h3>Parfumerya Brendi</h3></div>
-    </div>
-    <div class="work-item">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500" alt="Web-sayt">
-      <div class="overlay"><h3>Web-Dizayn</h3></div>
-    </div>
-    <div class="work-item">
-      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500" alt="Kodlash">
-      <div class="overlay"><h3>Dasturlash</h3></div>
-    </div>
+    <div class="work-item"><img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800" alt="1"></div>
+    <div class="work-item"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800" alt="2"></div>
+    <div class="work-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800" alt="3"></div>
+    <div class="work-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="4"></div>
+    <div class="work-item"><img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800" alt="5"></div>
+    <div class="work-item"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="6"></div>
+    <div class="work-item"><img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18?w=800" alt="7"></div>
+    <div class="work-item"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800" alt="8"></div>
   </div>
 </section>
 
 <section id="books">
-  <h2>Sevimli Kitoblarim</h2>
+  <h2 class="lang" data-uz="Elektron Kutubxona" data-en="E-Library">Elektron Kutubxona</h2>
   <div class="book-list">
-    <div class="book-card"><h4>Saodat Asri Qissalari</h4><p>Tarixiy-ma'rifiy</p></div>
-    <div class="book-card"><h4>O'tkan Kunlar</h4><p>Abdulla Qodiriy</p></div>
-    <div class="book-card"><h4>Diqqat (Deep Work)</h4><p>Kall Nyuport</p></div>
-    <div class="book-card"><h4>Atom Odatlar</h4><p>Jeyms Klir</p></div>
-    <div class="book-card"><h4>Ikki eshik orasi</h4><p>O'tkir Hoshimov</p></div>
-  </div>
+    <div class="book-card">
+      <h4>Saodat Asri Qissalari</h4>
+      <a href="https://ziyouz.uz/diniy-ma-rifiy-kitoblar/saodat-asri-qissalari/" target="_blank" class="pdf-link">O'qish / Read</a>
+    </div>
+    <div class="book-card">
+      <h4>Atom Odatlar</h4>
+      <a href="https://asaxiy.uz/product/james-clear-atom-odatlar" target="_blank" class="pdf-link">Yuklash / Download</a>
+    </div>
+    </div>
 </section>
 
 <section id="contact">
-  <div class="contact-card">
-    <h2>Menga yozing</h2>
-    <div class="socials">
-      <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
-      <a href="mailto:khasanovaozoda213@gmail.com" class="btn">Email</a>
-    </div>
+  <div class="socials">
+    <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
+    <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
   </div>
 </section>
 
-<footer>
-  <p>&copy; 2026 Hasanova Ozoda. Barcha huquqlar himoyalangan.</p>
-</footer>
+<script>
+  const langBtn = document.getElementById('lang-btn');
+  const langElements = document.querySelectorAll('.lang');
+  let currentLang = 'uz';
+  langBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'uz' ? 'en' : 'uz';
+    langBtn.innerText = currentLang === 'uz' ? 'EN' : 'UZ';
+    
+    langElements.forEach(el => {
+      el.innerText = el.getAttribute(data-${currentLang});
+    });
+  });
+</script>
 
 </body>
 </html>
