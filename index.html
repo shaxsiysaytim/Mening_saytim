@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ozodaxon | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -25,17 +25,22 @@
 <header id="home">
   <div class="hero-content">
     <h1 class="lang" data-uz="Hasanova Ozoda" data-en="Hasanova Ozoda">Hasanova Ozoda</h1>
-    <p class="slogan lang" data-uz='"Kelajakni bugun yaratamiz — kod va nafosat uyg&apos;unligida."' data-en='"Creating the future today — in harmony of code and elegance."'>"Kelajakni bugun yaratamiz — kod va nafosat uyg'unligida."</p>
+    <p class="slogan lang" 
+       data-uz='"Kelajakni bugun yaratamiz — kod va nafosat uyg&apos;unligida."' 
+       data-en='"Creating the future today — in harmony of code and elegance."'>
+       "Kelajakni bugun yaratamiz — kod va nafosat uyg'unligida."
+    </p>
+    <a href="#contact" class="main-btn lang" data-uz="Bog'lanish" data-en="Contact Me">Bog'lanish</a>
   </div>
 </header>
 
 <section id="about">
   <h2 class="lang" data-uz="Men haqimda" data-en="About Me">Men haqimda</h2>
-  <div class="about-text">
+  <div class="about-container">
     <p class="lang" 
-       data-uz="Men Qarshi davlat universiteti talabasiman. Frontend dasturlash va parfumerya olami bilan shug'ullanaman." 
-       data-en="I am a student at Karshi State University. I am passionate about Frontend development and the world of perfumery.">
-       Men Qarshi davlat universiteti talabasiman. Frontend dasturlash va parfumerya olami bilan shug'ullanaman.
+       data-uz="Men Qarshi davlat universiteti, Kompyuter ilmlari fakulteti talabasiman. Frontend dasturlash va parfumerya olami mening asosiy yo'nalishlarimdir." 
+       data-en="I am a student at Karshi State University, Faculty of Computer Science. Frontend development and the world of perfumery are my main fields.">
+       Men Qarshi davlat universiteti, Kompyuter ilmlari fakulteti talabasiman. Frontend dasturlash va parfumerya olami mening asosiy yo'nalishlarimdir.
     </p>
   </div>
 </section>
@@ -54,21 +59,31 @@
   </div>
 </section>
 
-<section id="books">
-  <h2 class="lang" data-uz="Elektron Kutubxona" data-en="E-Library">Elektron Kutubxona</h2>
+<section id="useful-sites">
+  <h2 class="lang" data-uz="Dasturchilar uchun" data-en="For Developers">Dasturchilar uchun</h2>
+  <div class="tools-grid">
+    <a href="https://github.com" target="_blank">GitHub</a>
+    <a href="https://stackoverflow.com" target="_blank">StackOverflow</a>
+    <a href="https://codepen.io" target="_blank">CodePen</a>
+    <a href="https://uiverse.io" target="_blank">Uiverse</a>
+    <a href="https://w3schools.com" target="_blank">W3Schools</a>
+    <a href="https://css-tricks.com" target="_blank">CSS Tricks</a>
+    <a href="https://mdn.io" target="_blank">MDN Docs</a>
+    <a href="https://figma.com" target="_blank">Figma</a>
+  </div>
+</section> 
+  <section id="books">
+  <h2 class="lang" data-uz="Kutubxona" data-en="E-Library">Kutubxona</h2>
   <div class="book-list">
-    <div class="book-card">
-      <h4>Saodat Asri Qissalari</h4>
-      <a href="https://ziyouz.uz/diniy-ma-rifiy-kitoblar/saodat-asri-qissalari/" target="_blank" class="pdf-link">O'qish / Read</a>
-    </div>
-    <div class="book-card">
-      <h4>Atom Odatlar</h4>
-      <a href="https://asaxiy.uz/product/james-clear-atom-odatlar" target="_blank" class="pdf-link">Yuklash / Download</a>
-    </div>
-    </div>
+    <div class="book-card"><h4>Saodat Asri</h4><a href="https://ziyouz.uz/diniy-ma-rifiy-kitoblar/saodat-asri-qissalari/" target="_blank">PDF</a></div>
+    <div class="book-card"><h4>O'tkan Kunlar</h4><a href="https://n.ziyouz.com/kutubxona/category/11-o-zbek-mumtoz-adabiyoti" target="_blank">PDF</a></div>
+    <div class="book-card"><h4>Atom Odatlar</h4><a href="https://asaxiy.uz" target="_blank">Link</a></div>
+    <div class="book-card"><h4>Deep Work</h4><a href="https://asaxiy.uz" target="_blank">Link</a></div>
+  </div>
 </section>
 
 <section id="contact">
+  <h2 class="lang" data-uz="Aloqa" data-en="Contact">Aloqa</h2>
   <div class="socials">
     <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
     <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
@@ -79,10 +94,10 @@
   const langBtn = document.getElementById('lang-btn');
   const langElements = document.querySelectorAll('.lang');
   let currentLang = 'uz';
+
   langBtn.addEventListener('click', () => {
     currentLang = currentLang === 'uz' ? 'en' : 'uz';
     langBtn.innerText = currentLang === 'uz' ? 'EN' : 'UZ';
-    
     langElements.forEach(el => {
       el.innerText = el.getAttribute(data-${currentLang});
     });
