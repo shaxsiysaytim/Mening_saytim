@@ -1,34 +1,147 @@
-<section id="books">
-  <h2 class="lang" data-uz="Kutubxona" data-en="E-Library">Kutubxona</h2>
-  <div class="book-list">
-    <div class="book-card"><h4>Saodat Asri</h4><a href="https://ziyouz.uz/diniy-ma-rifiy-kitoblar/saodat-asri-qissalari/" target="_blank">PDF</a></div>
-    <div class="book-card"><h4>O'tkan Kunlar</h4><a href="https://n.ziyouz.com/kutubxona/category/11-o-zbek-mumtoz-adabiyoti" target="_blank">PDF</a></div>
-    <div class="book-card"><h4>Atom Odatlar</h4><a href="https://asaxiy.uz" target="_blank">Link</a></div>
-    <div class="book-card"><h4>Deep Work</h4><a href="https://asaxiy.uz" target="_blank">Link</a></div>
-  </div>
-</section>
+/* Umumiy sozlamalar */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #3a0ca3, #7209b7);
+  color: white;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
 
-<section id="contact">
-  <h2 class="lang" data-uz="Aloqa" data-en="Contact">Aloqa</h2>
-  <div class="socials">
-    <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
-    <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
-  </div>
-</section>
+/* MENU */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-<script>
-  const langBtn = document.getElementById('lang-btn');
-  const langElements = document.querySelectorAll('.lang');
-  let currentLang = 'uz';
+nav h2 {
+    color: #00d2ff; /* Feruza rangli logotip */
+}
 
-  langBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'uz' ? 'en' : 'uz';
-    langBtn.innerText = currentLang === 'uz' ? 'EN' : 'UZ';
-    langElements.forEach(el => {
-      el.innerText = el.getAttribute(data-${currentLang});
-    });
-  });
-</script>
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
 
-</body>
-</html>
+nav a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c77dff;
+}
+
+/* HEADER */
+header h1 {
+  text-align: center;
+  font-size: 45px;
+  animation: fadeIn 2s ease;
+  color: #00d2ff;
+}
+
+/* SECTION */
+section {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 2px solid #c77dff;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.4);
+  animation: fadeUp 1s ease;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Parfyumeriya rasmlari uchun grid o'lchamlari diagramma bilan uyg'unlashadi */
+.parfum-grid img, .dasturlash-grid img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: 0.4s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.grid img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* STAT */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.box {
+  padding: 20px;
+  border: 2px solid #00d2ff;
+  border-radius: 10px;
+  font-size: 20px;
+  background: rgba(0,0,0,0.2);
+}
+
+/* Kitoblar ro'yxati */
+#books ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+#books ul li {
+  margin: 10px 0;
+}
+
+#books ul li a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px dashed #00d2ff;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px;
+  background: #7209b7;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #560bad;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform: translateY(30px);}
+  to {opacity:1; transform: translateY(0);}
+}
