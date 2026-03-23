@@ -3,106 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozodaxon | Portfolio</title>
+  <title>Ozodaxon Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<audio autoplay loop><source src="https://files.catbox.moe/9z7x1y.mp3" type="audio/mpeg"></audio>
-
 <nav>
-  <div class="logo">OZODAXON</div>
-  <ul class="nav-links">
-    <li><a href="#home" class="lang" data-uz="Asosiy" data-en="Home">Asosiy</a></li>
-    <li><a href="#about" class="lang" data-uz="Men haqimda" data-en="About">Men haqimda</a></li>
-    <li><a href="#portfolio" class="lang" data-uz="Galereya" data-en="Gallery">Galereya</a></li>
-    <li><a href="#books" class="lang" data-uz="Kutubxona" data-en="Library">Kutubxona</a></li>
+  <h2>Ozodaxon</h2>
+  <ul>
+    <li><a href="#home">Asosiy</a></li>
+    <li><a href="#about">Men haqimda</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#books">Kitoblar</a></li>
+    <li><a href="#contact">Aloqa</a></li>
   </ul>
-  <button id="lang-btn" class="lang-toggle">EN</button>
 </nav>
 
 <header id="home">
-  <div class="hero-content">
-    <h1 class="lang" data-uz="Hasanova Ozoda" data-en="Hasanova Ozoda">Hasanova Ozoda</h1>
-    <p class="slogan lang" 
-       data-uz='"Kelajakni bugun yaratamiz — kod va nafosat uyg&apos;unligida."' 
-       data-en='"Creating the future today — in harmony of code and elegance."'>
-       "Kelajakni bugun yaratamiz — kod va nafosat uyg'unligida."
-    </p>
-    <a href="#contact" class="main-btn lang" data-uz="Bog'lanish" data-en="Contact Me">Bog'lanish</a>
-  </div>
+  <h1>Salom Ozodaning saytiga xush kelibsiz</h1>
 </header>
 
+<section class="hero">
+  <h2>Men Ozodaxon</h2>
+  <p>Frontend Developer | Freelancer | Parfumerya</p>
+</section>
+
 <section id="about">
-  <h2 class="lang" data-uz="Men haqimda" data-en="About Me">Men haqimda</h2>
-  <div class="about-container">
-    <p class="lang" 
-       data-uz="Men Qarshi davlat universiteti, Kompyuter ilmlari fakulteti talabasiman. Frontend dasturlash va parfumerya olami mening asosiy yo'nalishlarimdir." 
-       data-en="I am a student at Karshi State University, Faculty of Computer Science. Frontend development and the world of perfumery are my main fields.">
-       Men Qarshi davlat universiteti, Kompyuter ilmlari fakulteti talabasiman. Frontend dasturlash va parfumerya olami mening asosiy yo'nalishlarimdir.
-    </p>
-  </div>
+  <h2>Men haqimda</h2>
+  <p>
+    Kelajakda katta IT mutaxassisi bo‘lishni va o‘z biznesimni rivojlantirishni xohlayman.
+    Web saytlar va parfumerya bilan shug‘ullanaman.
+  </p>
 </section>
 
 <section id="portfolio">
-  <h2 class="lang" data-uz="Galereya" data-en="Gallery">Galereya</h2>
-  <div class="work-grid">
-    <div class="work-item"><img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800" alt="1"></div>
-    <div class="work-item"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800" alt="2"></div>
-    <div class="work-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800" alt="3"></div>
-    <div class="work-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="4"></div>
-    <div class="work-item"><img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800" alt="5"></div>
-    <div class="work-item"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="6"></div>
-    <div class="work-item"><img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18?w=800" alt="7"></div>
-    <div class="work-item"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800" alt="8"></div>
+  <h2>Portfolio</h2>
+
+  <h3>Parfumlar</h3>
+  <div class="grid parfum-grid">
+    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539"> 
+    <img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18">
+    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
   </div>
+
+  <h3>Dasturlash</h3>
+  <div class="grid dasturlash-grid">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+  </div>
+
 </section>
 
-<section id="useful-sites">
-  <h2 class="lang" data-uz="Dasturchilar uchun" data-en="For Developers">Dasturchilar uchun</h2>
-  <div class="tools-grid">
-    <a href="https://github.com" target="_blank">GitHub</a>
-    <a href="https://stackoverflow.com" target="_blank">StackOverflow</a>
-    <a href="https://codepen.io" target="_blank">CodePen</a>
-    <a href="https://uiverse.io" target="_blank">Uiverse</a>
-    <a href="https://w3schools.com" target="_blank">W3Schools</a>
-    <a href="https://css-tricks.com" target="_blank">CSS Tricks</a>
-    <a href="https://mdn.io" target="_blank">MDN Docs</a>
-    <a href="https://figma.com" target="_blank">Figma</a>
-  </div>
-</section> 
-  <section id="books">
-  <h2 class="lang" data-uz="Kutubxona" data-en="E-Library">Kutubxona</h2>
-  <div class="book-list">
-    <div class="book-card"><h4>Saodat Asri</h4><a href="https://ziyouz.uz/diniy-ma-rifiy-kitoblar/saodat-asri-qissalari/" target="_blank">PDF</a></div>
-    <div class="book-card"><h4>O'tkan Kunlar</h4><a href="https://n.ziyouz.com/kutubxona/category/11-o-zbek-mumtoz-adabiyoti" target="_blank">PDF</a></div>
-    <div class="book-card"><h4>Atom Odatlar</h4><a href="https://asaxiy.uz" target="_blank">Link</a></div>
-    <div class="book-card"><h4>Deep Work</h4><a href="https://asaxiy.uz" target="_blank">Link</a></div>
-  </div>
+<section class="stats">
+  <div class="box">💼 5+ yil tajriba</div>
+  <div class="box">👩‍💻 200+ mijoz</div>
+  <div class="box">📚 100+ kitob</div>
+</section>
+
+<section id="books">
+  <h2>Sevimli kitoblar</h2>
+  <ul>
+    <li><a href="#">Atomic Habits</a></li>
+    <li><a href="#">Rich Dad Poor Dad</a></li>
+    <li><a href="#">Psychology of Money</a></li>
+    <li><a href="#">Deep Work</a></li>
+    <li><a href="#">Ikigai</a></li>
+    <li><a href="#">Think and Grow Rich</a></li>
+    <li><a href="#">Start With Why</a></li>
+    <li><a href="#">7 Habits of Highly Effective People</a></li>
+  </ul>
 </section>
 
 <section id="contact">
-  <h2 class="lang" data-uz="Aloqa" data-en="Contact">Aloqa</h2>
-  <div class="socials">
-    <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
-    <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
-  </div>
+  <h2>Aloqa</h2>
+  <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
+  <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
+  <a href="mailto:khasanovaozoda213@gmail.com" class="btn">Email</a>
 </section>
 
-<script>
-  const langBtn = document.getElementById('lang-btn');
-  const langElements = document.querySelectorAll('.lang');
-  let currentLang = 'uz';
-
-  langBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'uz' ? 'en' : 'uz';
-    langBtn.innerText = currentLang === 'uz' ? 'EN' : 'UZ';
-    langElements.forEach(el => {
-      el.innerText = el.getAttribute(data-${currentLang});
-    });
-  });
-</script>
+<audio autoplay loop>
+  <source src="https://files.catbox.moe/9z7x1y.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
