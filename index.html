@@ -2,92 +2,86 @@
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <title>Ozodaxon Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ozodaxon | Shaxsiy Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- MENU -->
 <nav>
-  <h2>Ozodaxon</h2>
+  <div class="logo">OZODAXON</div>
   <ul>
     <li><a href="#home">Asosiy</a></li>
     <li><a href="#about">Men haqimda</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#portfolio">Loyiha</a></li>
     <li><a href="#books">Kitoblar</a></li>
     <li><a href="#contact">Aloqa</a></li>
   </ul>
 </nav>
 
 <header id="home">
-  <h1>Salom Ozodaning saytiga xush kelibsiz</h1>
+  <div class="hero-content">
+    <h1>Hasanova Ozoda</h1>
+    <p class="slogan">"Kelajakni bugun yaratamiz — kod va nafosat uyg'unligida."</p>
+    <a href="#portfolio" class="main-btn">Ishlarimni ko'rish</a>
+  </div>
 </header>
 
-<section class="hero">
-  <h2>Men Ozodaxon</h2>
-  <p>Frontend Developer | Freelancer | Parfumerya</p>
-</section>
-
 <section id="about">
-  <h2>Men haqimda</h2>
-  <p>
-    Kelajakda katta IT mutaxassisi bo‘lishni va o‘z biznesimni rivojlantirishni xohlayman.
-    Web saytlar va parfumerya bilan shug‘ullanaman.
-  </p>
+  <div class="container">
+    <h2>Men haqimda</h2>
+    <p>Men Axborot tizimlari va texnologiyalari yo'nalishi talabasiman. Frontend dasturlashga bo'lgan qiziqishimni tadbirkorlik va parfumerya olami bilan birlashtiraman.</p>
+    <div class="stats-grid">
+      <div class="stat-card"><span>5+</span><br>Loyiha</div>
+      <div class="stat-card"><span>200+</span><br>Mijoz</div>
+      <div class="stat-card"><span>100+</span><br>Mutolaa</div>
+    </div>
+  </div>
 </section>
 
 <section id="portfolio">
   <h2>Portfolio</h2>
-
-  <h3>Parfumlar</h3>
-  <div class="grid">
-    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
-    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539">
-    <img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18">
-    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+  <div class="work-grid">
+    <div class="work-item">
+      <img src="https://images.unsplash.com/photo-1583523414454-0563d76bc61a?auto=format&fit=crop&w=500" alt="Parfumerya">
+      <div class="overlay"><h3>Parfumerya Brendi</h3></div>
+    </div>
+    <div class="work-item">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500" alt="Web-sayt">
+      <div class="overlay"><h3>Web-Dizayn</h3></div>
+    </div>
+    <div class="work-item">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500" alt="Kodlash">
+      <div class="overlay"><h3>Dasturlash</h3></div>
+    </div>
   </div>
-
-  <h3>Dasturlash</h3>
-  <div class="grid">
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
-    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-  </div>
-
 </section>
 
-<section class="stats">
-  <div class="box">💼 5+ yil tajriba</div>
-  <div class="box">👩‍💻 200+ mijoz</div>
-  <div class="box">📚 100+ kitob</div>
-</section>
-
-<!-- YANGI KITOBLAR -->
 <section id="books">
-  <h2>Sevimli kitoblar</h2>
-  <ul>
-    <li><a href="#">Atomic Habits</a></li>
-    <li><a href="#">Rich Dad Poor Dad</a></li>
-    <li><a href="#">Psychology of Money</a></li>
-    <li><a href="#">Deep Work</a></li>
-    <li><a href="#">Ikigai</a></li>
-    <li><a href="#">Think and Grow Rich</a></li>
-    <li><a href="#">Start With Why</a></li>
-    <li><a href="#">7 Habits of Highly Effective People</a></li>
-  </ul>
+  <h2>Sevimli Kitoblarim</h2>
+  <div class="book-list">
+    <div class="book-card"><h4>Saodat Asri Qissalari</h4><p>Tarixiy-ma'rifiy</p></div>
+    <div class="book-card"><h4>O'tkan Kunlar</h4><p>Abdulla Qodiriy</p></div>
+    <div class="book-card"><h4>Diqqat (Deep Work)</h4><p>Kall Nyuport</p></div>
+    <div class="book-card"><h4>Atom Odatlar</h4><p>Jeyms Klir</p></div>
+    <div class="book-card"><h4>Ikki eshik orasi</h4><p>O'tkir Hoshimov</p></div>
+  </div>
 </section>
 
 <section id="contact">
-  <h2>Aloqa</h2>
-  <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
-  <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
-  <a href="mailto:khasanovaozoda213@gmail.com" class="btn">Email</a>
+  <div class="contact-card">
+    <h2>Menga yozing</h2>
+    <div class="socials">
+      <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
+      <a href="mailto:khasanovaozoda213@gmail.com" class="btn">Email</a>
+    </div>
+  </div>
 </section>
 
-<audio autoplay loop>
-  <source src="https://files.catbox.moe/9z7x1y.mp3" type="audio/mpeg">
-</audio>
+<footer>
+  <p>&copy; 2026 Hasanova Ozoda. Barcha huquqlar himoyalangan.</p>
+</footer>
 
 </body>
 </html>
