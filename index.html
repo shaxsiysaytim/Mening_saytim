@@ -1,92 +1,121 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozodaxon Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitoraboymirzayeva</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Menu -->
+    <header>
+        <nav>
+            <div class="logo">Sitoraboymirzayeva</div>
+            <ul class="menu">
+                <li><a href="#home">Bosh sahifa</a></li>
+                <li><a href="#parfum">Parfumlar</a></li>
+                <li><a href="#developer">Dasturchilar</a></li>
+                <li><a href="#books">Kitoblar</a></li>
+                <li><a href="#experience">Tajribalarim</a></li>
+                <li><a href="#about">Men haqimda</a></li>
+                <li><a href="#contact">Aloqa</a></li>
+            </ul>
+            <div class="lang-switch">
+                <button id="uz">UZ</button>
+                <button id="en">EN</button>
+            </div>
+        </nav>
+    </header>
 
-<nav>
-  <h2>Ozodaxon</h2>
-  <ul>
-    <li><a href="#home">Asosiy</a></li>
-    <li><a href="#about">Men haqimda</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#books">Kitoblar</a></li>
-    <li><a href="#contact">Aloqa</a></li>
-  </ul>
-</nav>
+    <!-- Bosh sahifa -->
+    <section id="home">
+        <h1>Salom, men Ozodaxon!</h1>
+        <p>Bu mening shaxsiy saytlarim va tajribalarim to‘plami.</p>
+        <img src="images/home-banner.jpg" alt="Banner" class="home-img">
+    </section>
 
-<header id="home">
-  <h1>Salom Ozodaning saytiga xush kelibsiz</h1>
-</header>
+    <!-- Parfumlar -->
+    <section id="parfum">
+        <h2>Parfumlarim</h2>
+        <div class="parfum-gallery">
+            <div class="parfum-item"><img src="images/parfum1.jpg" alt="Parfum 1"><p>Parfum 1</p></div>
+            <div class="parfum-item"><img src="images/parfum2.jpg" alt="Parfum 2"><p>Parfum 2</p></div>
+            <div class="parfum-item"><img src="images/parfum3.jpg" alt="Parfum 3"><p>Parfum 3</p></div>
+            <div class="parfum-item"><img src="images/parfum4.jpg" alt="Parfum 4"><p>Parfum 4</p></div>
+        </div>
+    </section>
 
-<section class="hero">
-  <h2>Men Ozodaxon</h2>
-  <p>Frontend Developer | Freelancer | Parfumerya</p>
-</section>
+    <!-- Dasturchilar -->
+    <section id="developer">
+        <h2>Dasturchilik rasmlari</h2>
+        <div class="developer-gallery">
+            <div class="dev-item"><img src="images/dev1.jpg" alt="Dasturchi 1"></div>
+            <div class="dev-item"><img src="images/dev2.jpg" alt="Dasturchi 2"></div>
+            <div class="dev-item"><img src="images/dev3.jpg" alt="Dasturchi 3"></div>
+            <div class="dev-item"><img src="images/dev4.jpg" alt="Dasturchi 4"></div>
+        </div>
+        <h3>Foydali havolalar</h3>
+        <ul class="links">
+            <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+            <li><a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a></li>
+            <li><a href="https://www.codecademy.com" target="_blank">Codecademy</a></li>
+            <li><a href="https://stackoverflow.com" target="_blank">Stack Overflow</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
 
-<section id="about">
-  <h2>Men haqimda</h2>
-  <p>
-    Kelajakda katta IT mutaxassisi bo‘lishni va o‘z biznesimni rivojlantirishni xohlayman.
-    Web saytlar va parfumerya bilan shug‘ullanaman.
-  </p>
-</section>
+    <!-- Kitoblar -->
+    <section id="books">
+        <h2>Kitoblar</h2>
+        <ul class="book-list">
+            <li>Atom odatlari</li>
+            <li>Fotimaning bolasai</li>
+            <li>Kecha va kunduz</li>
+            <li>O‘tgan kunlar</li>
+            <li>Kitob 5</li>
+            <li>Kitob 6</li>
+            <li>Kitob 7</li>
+            <li>Kitob 8</li>
+            <li>Kitob 9</li>
+            <li>Kitob 10</li>
+            <li>Kitob 11</li>
+            <li>Kitob 12</li>
+            <li>Kitob 13</li>
+            <li>Kitob 14</li>
+            <li>Kitob 15</li>
+            <li>Kitob 16</li>
+            <li>Kitob 17</li>
+            <li>Kitob 18</li>
+            <li>Kitob 19</li>
+            <li>Kitob 20</li>
+        </ul>
+    </section>
 
-<section id="portfolio">
-  <h2>Portfolio</h2>
+    <!-- Tajribalarim -->
+    <section id="experience">
+        <h2>Tajribalarim</h2>
+        <p>Bu yerga shaxsiy loyihalar, dasturlash va boshqa tajribalarimni qo‘shamiz.</p>
+    </section>
 
-  <h3>Parfumlar</h3>
-  <div class="grid parfum-grid">
-    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
-    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539"> 
-    <img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18">
-    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
-  </div>
+    <!-- Men haqimda -->
+    <section id="about">
+        <h2>Men haqimda</h2>
+        <p>Bu yerda Ozodaxon haqida batafsil ma’lumot beriladi.</p>
+    </section>
 
-  <h3>Dasturlash</h3>
-  <div class="grid dasturlash-grid">
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
-    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-  </div>
+    <!-- Aloqa -->
+    <section id="contact">
+        <h2>Aloqa</h2>
+        <p>Email: <a href="mailto:khasanova.ozoda213@gmail.com">khasanova.ozoda213@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/ozosh" target="_blank">@ozosh</a></p>
+        <p>Telegram: <a href="https://t.me/ozosh" target="_blank">@ozosh</a></p>
+    </section>
 
-</section>
+    <footer>
+        <p>&copy; 2026 Sitoraboymirzayeva. Barcha huquqlar himoyalangan.</p>
+    </footer>
 
-<section class="stats">
-  <div class="box">💼 5+ yil tajriba</div>
-  <div class="box">👩‍💻 200+ mijoz</div>
-  <div class="box">📚 100+ kitob</div>
-</section>
-
-<section id="books">
-  <h2>Sevimli kitoblar</h2>
-  <ul>
-    <li><a href="#">Atomic Habits</a></li>
-    <li><a href="#">Rich Dad Poor Dad</a></li>
-    <li><a href="#">Psychology of Money</a></li>
-    <li><a href="#">Deep Work</a></li>
-    <li><a href="#">Ikigai</a></li>
-    <li><a href="#">Think and Grow Rich</a></li>
-    <li><a href="#">Start With Why</a></li>
-    <li><a href="#">7 Habits of Highly Effective People</a></li>
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>Aloqa</h2>
-  <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
-  <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
-  <a href="mailto:khasanovaozoda213@gmail.com" class="btn">Email</a>
-</section>
-
-<audio autoplay loop>
-  <source src="https://files.catbox.moe/9z7x1y.mp3" type="audio/mpeg">
-</audio>
-
+    <script src="script.js"></script>
 </body>
 </html>
