@@ -1,13 +1,128 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <title>Ozodaxon Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ozodaxon Portfolio</title>
+
+<style>
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #240046, #00b4d8);
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 40px;
+}
+
+/* SECTION */
+section {
+  margin: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid #00b4d8;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.grid img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.grid img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px #00b4d8;
+}
+
+/* KITOB */
+#books a {
+  color: #00e5ff;
+  text-decoration: none;
+}
+
+#books a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.btn {
+  padding: 10px 20px;
+  background: #6a0dad;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #6a0dad;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00b4d8;
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- MENU -->
+<!-- NAVBAR -->
 <nav>
   <h2>Ozodaxon</h2>
   <ul>
@@ -15,79 +130,69 @@
     <li><a href="#about">Men haqimda</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#books">Kitoblar</a></li>
+    <li><a href="#feedback">Fikr</a></li>
     <li><a href="#contact">Aloqa</a></li>
   </ul>
 </nav>
 
+<!-- HEADER -->
 <header id="home">
-  <h1>Salom Ozodaning saytiga xush kelibsiz</h1>
+  <h1>Salom! Mening shaxsiy saytimga xush kelibsiz</h1>
 </header>
 
-<section class="hero">
-  <h2>Men Ozodaxon</h2>
-  <p>Frontend Developer | Freelancer | Parfumerya</p>
-</section>
-
+<!-- ABOUT -->
 <section id="about">
   <h2>Men haqimda</h2>
-  <p>
-    Kelajakda katta IT mutaxassisi bo‘lishni va o‘z biznesimni rivojlantirishni xohlayman.
-    Web saytlar va parfumerya bilan shug‘ullanaman.
-  </p>
+  <p>Men dasturlash va parfumerya bilan shug‘ullanaman. Kelajakda IT sohasida katta natijalarga erishmoqchiman.</p>
 </section>
 
+<!-- PORTFOLIO -->
 <section id="portfolio">
   <h2>Portfolio</h2>
 
   <h3>Parfumlar</h3>
   <div class="grid">
-    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
     <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539">
     <img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18">
-    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
   </div>
 
   <h3>Dasturlash</h3>
   <div class="grid">
     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
   </div>
-
 </section>
 
-<section class="stats">
-  <div class="box">💼 5+ yil tajriba</div>
-  <div class="box">👩‍💻 200+ mijoz</div>
-  <div class="box">📚 100+ kitob</div>
-</section>
-
-<!-- YANGI KITOBLAR -->
+<!-- KITOBLAR -->
 <section id="books">
   <h2>Sevimli kitoblar</h2>
   <ul>
-    <li><a href="#">Atomic Habits</a></li>
-    <li><a href="#">Rich Dad Poor Dad</a></li>
-    <li><a href="#">Psychology of Money</a></li>
-    <li><a href="#">Deep Work</a></li>
-    <li><a href="#">Ikigai</a></li>
-    <li><a href="#">Think and Grow Rich</a></li>
-    <li><a href="#">Start With Why</a></li>
-    <li><a href="#">7 Habits of Highly Effective People</a></li>
+    <li><a href="https://www.google.com/search?q=Atomic+Habits+kitob" target="_blank">Atomic Habits</a></li>
+    <li><a href="https://www.google.com/search?q=Rich+Dad+Poor+Dad+kitob" target="_blank">Rich Dad Poor Dad</a></li>
+    <li><a href="https://www.google.com/search?q=Psychology+of+Money+kitob" target="_blank">Psychology of Money</a></li>
+    <li><a href="https://www.google.com/search?q=Deep+Work+kitob" target="_blank">Deep Work</a></li>
+    <li><a href="https://www.google.com/search?q=Ikigai+kitob" target="_blank">Ikigai</a></li>
+    <li><a href="https://www.google.com/search?q=Think+and+Grow+Rich+kitob" target="_blank">Think and Grow Rich</a></li>
   </ul>
 </section>
 
+<!-- FIKR -->
+<section id="feedback">
+  <h2>Fikr bildirish</h2>
+  <form>
+    <input type="text" placeholder="Ismingiz" required>
+    <textarea placeholder="Fikringiz..." required></textarea>
+    <button type="submit">Yuborish</button>
+  </form>
+</section>
+
+<!-- ALOQA -->
 <section id="contact">
   <h2>Aloqa</h2>
   <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
   <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
-  <a href="mailto:khasanovaozoda213@gmail.com" class="btn">Email</a>
 </section>
-
-<audio autoplay loop>
-  <source src="https://files.catbox.moe/9z7x1y.mp3" type="audio/mpeg">
-</audio>
 
 </body>
 </html>
