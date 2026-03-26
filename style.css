@@ -1,124 +1,47 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #000000, #240046, #00b4d8);
+  font-family: Arial;
+  background: radial-gradient(circle at top, #14002b, #000000);
   color: white;
-  scroll-behavior: smooth;
 }
 
 /* NAV */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: rgba(0,0,0,0.7);
-  position: sticky;
-  top: 0;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-/* HEADER */
-header {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-header h1 {
-  font-size: 28px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #6a0dad;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-/* SECTION */
-section {
-  margin: 25px;
-  padding: 20px;
-  border-radius: 12px;
-  background: rgba(0,0,0,0.6);
-  border: 1px solid #00b4d8;
+  padding: 15px 30px;
+  background: #000;
 }
 
 /* GRID */
 .grid {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
-.card {
-  background: #111;
-  padding: 10px;
+.grid img {
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
-}
-
-.card img {
-  width: 220px;
-  height: 220px;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: 0.3s;
-}
-
-.card img:hover {
-  transform: scale(1.1);
-}
-
-/* STATS */
-.stats {
-  display: flex;
-  justify-content: space-around;
 }
 
 /* FORM */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 input, textarea {
+  width: 100%;
   padding: 10px;
-  border-radius: 8px;
-  border: none;
+  margin: 5px 0;
 }
 
+/* BUTTON */
 button {
-  background: #6a0dad;
-  color: white;
   padding: 10px;
+  background: purple;
+  color: white;
   border: none;
-  border-radius: 8px;
-} 
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s;
 }
 
+/* LIGHT MODE */
 .light {
   background: white;
-  color: black;
-}
-
-.light section {
-  background: #eee;
   color: black;
 }
