@@ -1,144 +1,77 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozodaxon Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ozodaxon Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
+<nav> 
+  const token = "BU_YERGA_TOKEN";
+const chat_id = "BU_YERGA_CHAT_ID";
   <h2>Ozodaxon</h2>
   <ul>
     <li><a href="#home">Asosiy</a></li>
-    <li><a href="#about">Men haqimda</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#stats">Statistika</a></li>
-    <li><a href="#books">Kitoblar</a></li>
     <li><a href="#feedback">Fikr</a></li>
-    <li><a href="#contact">Aloqa</a></li>
   </ul>
+  <button onclick="toggleMode()" class="btn">🌙</button>
 </nav>
-<button onclick="toggleMode()" class="btn">🌙</button>
+
 <header id="home">
-  <h1>Frontend Developer | Freelancer | Parfumerya</h1>
-  <a href="#contact" class="btn">Men bilan ishlang</a>
+  <h1>Frontend Developer | Parfumerya</h1>
 </header>
 
-<section id="about">
-  <h2>Men haqimda</h2>
-  <p>Men zamonaviy web saytlar yarataman va parfumerya bilan shug‘ullanaman.</p>
-</section>
-
 <section id="portfolio">
-  <h2>Portfolio</h2>
-
-  <h3>Parfumlar</h3>
+  <h2>Parfumlar</h2>
   <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539">
-      <p>Premium parfum dizayni</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18">
-      <p>Luxury kolleksiya</p>
-    </div>
+    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539">
+    <img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18">
   </div>
-
-  <h3>Dasturlash</h3>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-      <p>Web development</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-      <p>Frontend loyihalar</p>
-    </div>
-  </div>
-</section>
-
-<section id="stats">
-  <h2>Natijalarim</h2>
-  <div class="stats">
-    <div>💼 5+ yil tajriba</div>
-    <div>👩‍💻 200+ mijoz</div>
-    <div>📚 100+ kitob</div>
-  </div>
-</section>
-
-<section id="books">
-  <h2>Sevimli kitoblar</h2>
-  <ul>
-    <li><a href="https://www.google.com/search?q=Atomic+Habits+kitob" target="_blank">Atomic Habits</a></li>
-    <li><a href="https://www.google.com/search?q=Deep+Work+kitob" target="_blank">Deep Work</a></li>
-    <li><a href="https://www.google.com/search?q=Psychology+of+Money+kitob" target="_blank">Psychology of Money</a></li>
-  </ul>
 </section>
 
 <section id="feedback">
   <h2>Fikr bildirish</h2>
-  <form>
-    <input type="text" placeholder="Ismingiz">
-    <textarea placeholder="Fikringiz"></textarea>
+  <form onsubmit="sendToTelegram(event)">
+    <input type="text" id="name" placeholder="Ismingiz" required>
+    <textarea id="message" placeholder="Fikringiz..." required></textarea>
     <button type="submit">Yuborish</button>
   </form>
 </section>
 
-<section id="contact">
-  <h2>Aloqa</h2>
-  <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
-  <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
-</section>
+<script>
 
-</body> 
-  <script>
-
-/* DARK MODE */
 function toggleMode(){
   document.body.classList.toggle("light");
 }
 
-/* IMAGE CLICK */
-document.querySelectorAll(".card img").forEach(img => {
-  img.onclick = () => {
-    const modal = document.createElement("div");
-    modal.style = `
-      position:fixed;
-      top:0;left:0;
-      width:100%;height:100%;
-      background:rgba(0,0,0,0.9);
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    `;
+function sendToTelegram(e){
+  e.preventDefault();
 
-    const bigImg = document.createElement("img");
-    bigImg.src = img.src;
-    bigImg.style.width = "60%";
+  const name = document.getElementById("name").value;
+  const message = document.getElementById("message").value;
 
-    modal.appendChild(bigImg);
-    modal.onclick = () => modal.remove();
+  const token = "BU_YERGA_TOKEN";
+  const chat_id = "BU_YERGA_CHAT_ID";
 
-    document.body.appendChild(modal);
-  };
-});
+  const text = `Yangi fikr:\nIsm: ${name}\nXabar: ${message}`;
 
-/* SCROLL ANIMATION */
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    if(sec.getBoundingClientRect().top < window.innerHeight - 100){
-      sec.style.opacity = 1;
-      sec.style.transform = "translateY(0)";
-    }
-  });
-});
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      chat_id: chat_id,
+      text: text
+    })
+  })
+  .then(() => alert("Yuborildi ✅"))
+  .catch(() => alert("Xatolik ❌"));
+}
 
 </script>
+
+</body>
 </html>
