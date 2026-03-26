@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: radial-gradient(circle at top, #14002b, #000000);
+  background: linear-gradient(135deg, #14002b, #00cfcf);
   color: white;
 }
 
@@ -10,38 +10,84 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px 30px;
-  background: #000;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, purple, cyan);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
 }
 
 /* GRID */
 .grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap: 20px;
+  padding: 20px;
 }
 
-.grid img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
-/* FORM */
-input, textarea {
+.card img {
   width: 100%;
-  padding: 10px;
-  margin: 5px 0;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s;
 }
 
-/* BUTTON */
-button {
+.card span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
   padding: 10px;
-  background: purple;
-  color: white;
-  border: none;
+  opacity: 0;
+  transition: 0.4s;
 }
 
-/* LIGHT MODE */
-.light {
-  background: white;
-  color: black;
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card:hover span {
+  opacity: 1;
+}
+
+/* CURSOR */
+.cursor {
+  width: 10px;
+  height: 10px;
+  background: cyan;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* SECTION */
+section {
+  padding: 40px;
+  text-align: center;
 }
