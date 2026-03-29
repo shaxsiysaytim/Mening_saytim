@@ -13,11 +13,14 @@
 <!-- NAV -->
 <nav>
   <h2>Ozodaxon</h2>
-  <ul>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul id="menu">
     <li><a href="#home">Asosiy</a></li>
     <li><a href="#about">Men haqimda</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#links">Foydali saytlar</a></li>
+    <li><a href="#links">Saytlar</a></li>
     <li><a href="#contact">Aloqa</a></li>
   </ul>
 </nav>
@@ -119,4 +122,9 @@
 </section>
 
 </body>
-</html>
+</html> 
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
