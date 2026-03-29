@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(135deg, #000000, #14002b, #00cfcf);
+  background: linear-gradient(135deg, #000000, #1a0033, #6a00ff);
   color: white;
 }
 
@@ -27,7 +27,28 @@ nav a {
 /* HEADER */
 header {
   text-align: center;
-  padding: 50px;
+  padding: 70px 20px;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #8000ff, #00ffff);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* ABOUT */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 /* GRID */
@@ -43,27 +64,11 @@ header {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  transition: 0.3s;
-}
-
-.grid img:hover {
-  transform: scale(1.05);
 }
 
 /* CONTACT */
 .links {
   margin-bottom: 20px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 20px;
-  background: linear-gradient(45deg, #8000ff, #00ffff);
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
 }
 
 /* FORM */
@@ -76,17 +81,17 @@ input, textarea {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
-  border: none;
   border-radius: 8px;
+  border: none;
 }
 
 button {
   width: 100%;
   padding: 10px;
-  background: #00cfcf;
+  background: #6a00ff;
   border: none;
   border-radius: 8px;
-  color: black;
+  color: white;
 }
 
 /* SECTION */
