@@ -1,51 +1,32 @@
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ozodaxon Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
-<!-- AOS animatsiya -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
-
-<body>
-
-<nav>
-  <h2>Ozodaxon</h2>
-
-  <ul>
-    <li><a href="#home">Asosiy</a></li>
-    <li><a href="#about">Men haqimda</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Bog‘lanish</a></li>
-  </ul>
-
-  <button onclick="toggleMode()" class="mode">🌙</button>
-</nav>
-
-<header id="home">
-  <h1 data-aos="fade-up">Hasanova Ozodaning saytiga xush kelibsiz</h1>
-  <p data-aos="fade-up">Frontend Developer | Parfumerya</p>
-  <a href="#contact" class="btn big" data-aos="zoom-in">Men bilan ishlang</a>
-</header>
-
 <section id="about">
-  <h2 data-aos="fade-right">Men haqimda</h2>
+  <h2 data-aos="fade-up">Men haqimda</h2>
 
-  <p data-aos="fade-left">
-    Men Qarshi davlat universiteti, Axborot tizimlari va texnologiyalari
-    yo‘nalishida tahsil olaman. Zamonaviy web saytlar yarataman
-    va parfumerya bilan shug‘ullanaman.Marketing sohasiga qiziqaman
-  </p>
+  <div class="about-card" data-aos="zoom-in">
 
-  <div class="stats">
-    <div data-aos="zoom-in"><h3>100+</h3><p>Kitob</p></div>
-    <div data-aos="zoom-in"><h3>200+</h3><p>Mijoz</p></div>
-    <div data-aos="zoom-in"><h3>50+</h3><p>Loyiha</p></div>
+    <p>
+      Men Hasanova Ozoda, Qarshi davlat universiteti talabasi bo‘lib,
+      Axborot tizimlari va texnologiyalari yo‘nalishida tahsil olaman.
+      Frontend dasturchi sifatida zamonaviy, chiroyli va foydalanuvchi
+      uchun qulay web saytlar yaratishga ixtisoslashganman.
+    </p>
+
+    <p>
+      Men HTML, CSS va JavaScript yordamida responsive va interaktiv
+      saytlar ishlab chiqaman. Har bir loyihamda dizayn, tezlik va
+      foydalanuvchi tajribasiga alohida e’tibor beraman.
+    </p>
+
+    <p>
+      Bundan tashqari, parfumerya sohasiga ham qiziqaman va bu yo‘nalishda
+      ham mijozlar bilan ishlayman. Estetika va did men uchun juda muhim.
+    </p>
+
+    <div class="stats">
+      <div><h3>100+</h3><p>Kitob o‘qilgan</p></div>
+      <div><h3>200+</h3><p>Mijozlar bilan ishlangan</p></div>
+      <div><h3>50+</h3><p>Loyihalar yaratilgan</p></div>
+    </div>
+
   </div>
 </section>
 
@@ -54,45 +35,15 @@
 
   <h3>Parfumerya</h3>
   <div class="grid">
-    <img src="https://picsum.photos/400?1">
-    <img src="https://picsum.photos/400?2">
-    <img src="https://picsum.photos/400?3">
+    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f">
+    <img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18">
+    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
   </div>
 
   <h3>Dasturlash</h3>
   <div class="grid">
-    <img src="https://picsum.photos/400?4">
-    <img src="https://picsum.photos/400?5">
-    <img src="https://picsum.photos/400?6">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051">
   </div>
 </section>
-
-<section id="contact">
-  <h2 data-aos="fade-up">Bog‘lanish</h2>
-
-  <div class="contact-box">
-    <a href="https://t.me/oddiy_ozosh" class="btn big">Telegram</a>
-    <a href="https://instagram.com/oddiy_ozosh" class="btn big">Instagram</a>
-    <a href="mailto:khasanovaozoda213@gmail.com" class="btn big">Email</a>
-  </div>
-
-  <form class="form" data-aos="fade-up">
-    <input type="text" placeholder="Ismingiz">
-    <textarea placeholder="Fikringiz"></textarea>
-    <button class="btn big">Yuborish</button>
-  </form>
-</section>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-AOS.init();
-
-// Dark mode
-function toggleMode(){
-  document.body.classList.toggle("light");
-}
-</script>
-
-</body>
-</html>
