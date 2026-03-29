@@ -1,37 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ozodaxon Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- animatsiya -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+  <h2>Ozodaxon</h2>
+
+  <ul>
+    <li><a href="#home">Asosiy</a></li>
+    <li><a href="#about">Men haqimda</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Aloqa</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <h1>Hasanova Ozodaning saytiga xush kelibsiz</h1>
+  <p>Frontend Developer | Parfumerya</p>
+  <a href="#contact" class="btn">Men bilan ishlang</a>
+</header>
+
 <section id="about">
-  <h2 data-aos="fade-up">Men haqimda</h2>
+  <h2>Men haqimda</h2>
 
-  <div class="about-card" data-aos="zoom-in">
-
+  <div class="about-card">
     <p>
-      Men Hasanova Ozoda, Qarshi davlat universiteti talabasi bo‘lib,
-      Axborot tizimlari va texnologiyalari yo‘nalishida tahsil olaman.
-      Frontend dasturchi sifatida zamonaviy, chiroyli va foydalanuvchi
-      uchun qulay web saytlar yaratishga ixtisoslashganman.
+      Men Qarshi davlat universiteti talabasi bo‘lib,
+      Axborot tizimlari va texnologiyalari yo‘nalishida o‘qiyman.
+      Frontend dasturchi sifatida zamonaviy web saytlar yarataman.
     </p>
 
     <p>
-      Men HTML, CSS va JavaScript yordamida responsive va interaktiv
-      saytlar ishlab chiqaman. Har bir loyihamda dizayn, tezlik va
-      foydalanuvchi tajribasiga alohida e’tibor beraman.
-    </p>
-
-    <p>
-      Bundan tashqari, parfumerya sohasiga ham qiziqaman va bu yo‘nalishda
-      ham mijozlar bilan ishlayman. Estetika va did men uchun juda muhim.
+      HTML, CSS va JavaScript yordamida ishlayman.
+      Har bir loyihamda dizayn va qulaylik muhim o‘rin tutadi.
     </p>
 
     <div class="stats">
-      <div><h3>100+</h3><p>Kitob o‘qilgan</p></div>
-      <div><h3>200+</h3><p>Mijozlar bilan ishlangan</p></div>
-      <div><h3>50+</h3><p>Loyihalar yaratilgan</p></div>
+      <div><h3>100+</h3><p>Kitob</p></div>
+      <div><h3>200+</h3><p>Mijoz</p></div>
+      <div><h3>50+</h3><p>Loyiha</p></div>
     </div>
-
   </div>
 </section>
 
 <section id="portfolio">
-  <h2 data-aos="fade-up">Ishlarim</h2>
+  <h2>Ishlarim</h2>
 
   <h3>Parfumerya</h3>
   <div class="grid">
@@ -47,3 +70,25 @@
     <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051">
   </div>
 </section>
+
+<section id="contact">
+  <h2>Aloqa</h2>
+
+  <div class="contact-box">
+    <a href="https://t.me/oddiy_ozosh" class="btn">Telegram</a>
+    <a href="https://instagram.com/oddiy_ozosh" class="btn">Instagram</a>
+    <a href="mailto:khasanovaozoda213@gmail.com" class="btn">Email</a>
+  </div>
+
+  <form class="form">
+    <input type="text" placeholder="Ismingiz">
+    <textarea placeholder="Fikringiz"></textarea>
+    <button>Yuborish</button>
+  </form>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>
