@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(135deg, #0a001f, #1a0033, #6a00ff);
+  background: linear-gradient(135deg, #0a001f, #2a0050, #6a00ff);
   color: white;
 }
 
@@ -30,6 +30,10 @@ header {
   padding: 60px 20px;
 }
 
+h1 {
+  font-size: 28px;
+}
+
 /* BUTTON */
 .btn {
   display: inline-block;
@@ -38,6 +42,7 @@ header {
   border-radius: 10px;
   color: white;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 /* ABOUT */
@@ -49,7 +54,6 @@ header {
   border-radius: 15px;
 }
 
-/* STATS */
 .stats {
   display: flex;
   justify-content: space-around;
@@ -68,6 +72,35 @@ header {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px;
+}
+
+/* LINKS */
+#links {
+  text-align: center;
+  padding: 40px;
+}
+
+.links-box {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.links-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-box li {
+  margin: 10px 0;
+}
+
+.links-box a {
+  color: #00ffff;
+  text-decoration: none;
 }
 
 /* CONTACT */
@@ -78,7 +111,6 @@ header {
   flex-wrap: wrap;
 }
 
-/* FORM */
 .form {
   max-width: 400px;
   margin: auto;
@@ -90,7 +122,7 @@ input, textarea {
   margin: 5px 0;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px){
   .grid {
     grid-template-columns: 1fr;
@@ -98,5 +130,9 @@ input, textarea {
 
   nav ul {
     display: none;
+  }
+
+  h1 {
+    font-size: 22px;
   }
 }
