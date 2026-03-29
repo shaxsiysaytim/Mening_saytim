@@ -1,16 +1,24 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: linear-gradient(135deg, #000000, #1a0033, #6a00ff);
+  font-family: 'Segoe UI';
+  background: linear-gradient(135deg, #0a001f, #1a0033, #6a00ff);
   color: white;
+  transition: 0.3s;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #ffffff;
+  color: black;
 }
 
 /* NAV */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  background: rgba(0,0,0,0.8);
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
 }
 
 nav ul {
@@ -24,51 +32,58 @@ nav a {
   text-decoration: none;
 }
 
+.mode {
+  padding: 10px;
+  border-radius: 10px;
+}
+
 /* HEADER */
 header {
   text-align: center;
-  padding: 70px 20px;
+  padding: 100px 20px;
 }
 
-header h1 {
-  font-size: 28px;
-}
-
+/* BUTTON */
 .btn {
   display: inline-block;
-  margin-top: 15px;
   padding: 12px 25px;
-  background: linear-gradient(45deg, #8000ff, #00ffff);
-  border-radius: 10px;
+  background: linear-gradient(45deg, #a020f0, #00ffff);
+  border-radius: 12px;
   color: white;
   text-decoration: none;
+  transition: 0.3s;
 }
 
-/* ABOUT */
-.stats {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.big {
+  padding: 15px 30px;
+  font-size: 18px;
 }
 
 /* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 15px;
+  gap: 20px;
   padding: 20px;
 }
 
 .grid img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 /* CONTACT */
-.links {
-  margin-bottom: 20px;
+.contact-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 /* FORM */
@@ -79,23 +94,24 @@ header h1 {
 
 input, textarea {
   width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 8px;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
   border: none;
 }
 
 button {
   width: 100%;
-  padding: 10px;
-  background: #6a00ff;
   border: none;
-  border-radius: 8px;
-  color: white;
 }
 
-/* SECTION */
-section {
-  padding: 40px;
-  text-align: center;
+/* RESPONSIVE */
+@media(max-width:768px){
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    display: none;
+  }
 }
