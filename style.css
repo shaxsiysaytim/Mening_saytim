@@ -1,29 +1,21 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI';
+  font-family: Arial;
   background: linear-gradient(135deg, #0a001f, #1a0033, #6a00ff);
   color: white;
-  transition: 0.3s;
-} 
-
-/* LIGHT MODE */
-body.light {
-  background: #ffffff;
-  color: black;
 }
 
 /* NAV */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+  padding: 15px;
+  background: rgba(0,0,0,0.7);
 }
 
 nav ul {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   list-style: none;
 }
 
@@ -32,57 +24,57 @@ nav a {
   text-decoration: none;
 }
 
-.mode {
-  padding: 10px;
-  border-radius: 10px;
-}
-
 /* HEADER */
 header {
   text-align: center;
-  padding: 100px 20px;
+  padding: 60px 20px;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 12px 20px;
   background: linear-gradient(45deg, #a020f0, #00ffff);
-  border-radius: 12px;
+  border-radius: 10px;
   color: white;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.1);
+/* ABOUT */
+.about-card {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
 }
 
-.big {
-  padding: 15px 30px;
-  font-size: 18px;
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 /* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .grid img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 15px;
 }
 
 /* CONTACT */
 .contact-box {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -94,15 +86,8 @@ header {
 
 input, textarea {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 10px;
-  border: none;
-}
-
-button {
-  width: 100%;
-  border: none;
+  padding: 10px;
+  margin: 5px 0;
 }
 
 /* RESPONSIVE */
@@ -114,5 +99,4 @@ button {
   nav ul {
     display: none;
   }
-} 
-
+}
