@@ -3,96 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ozodaxon Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- AOS animatsiya -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
 <nav>
   <h2>Ozodaxon</h2>
+
   <ul>
     <li><a href="#home">Asosiy</a></li>
     <li><a href="#about">Men haqimda</a></li>
-    <li><a href="#parfum">Parfum</a></li>
-    <li><a href="#dev">Dasturlash</a></li>
-    <li><a href="#contact">Aloqa</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Bog‘lanish</a></li>
   </ul>
+
+  <button onclick="toggleMode()" class="mode">🌙</button>
 </nav>
 
 <header id="home">
-  <h1>Hasanova Ozodaning saytiga xush kelibsiz</h1>
-  <p>Frontend Developer | Parfumerya</p>
-  <a href="#contact" class="btn">Men bilan ishlang</a>
+  <h1 data-aos="fade-up">Hasanova Ozodaning saytiga xush kelibsiz</h1>
+  <p data-aos="fade-up">Frontend Developer | Parfumerya</p>
+  <a href="#contact" class="btn big" data-aos="zoom-in">Men bilan ishlang</a>
 </header>
 
-<!-- ABOUT -->
 <section id="about">
-  <h2>Men haqimda</h2>
-  <p>
-    Men frontend dasturchi va parfumerya sohasida faoliyat yuritaman.
-    Zamonaviy web saytlar yaratish va mijozlar uchun premium xizmatlar ko‘rsataman.
+  <h2 data-aos="fade-right">Men haqimda</h2>
+
+  <p data-aos="fade-left">
+    Men Qarshi davlat universiteti, Axborot tizimlari va texnologiyalari
+    yo‘nalishida tahsil olaman. Zamonaviy web saytlar yarataman
+    va parfumerya bilan shug‘ullanaman.Marketing sohasiga qiziqaman
   </p>
 
   <div class="stats">
-    <div><h3>100+</h3><p>O‘qilgan kitoblar</p></div>
-    <div><h3>200+</h3><p>Mijozlar</p></div>
-    <div><h3>50+</h3><p>Loyihalar</p></div>
+    <div data-aos="zoom-in"><h3>100+</h3><p>Kitob</p></div>
+    <div data-aos="zoom-in"><h3>200+</h3><p>Mijoz</p></div>
+    <div data-aos="zoom-in"><h3>50+</h3><p>Loyiha</p></div>
   </div>
 </section>
 
-<!-- PARFUM -->
-<section id="parfum">
-  <h2>Parfumerya</h2>
+<section id="portfolio">
+  <h2 data-aos="fade-up">Ishlarim</h2>
+
+  <h3>Parfumerya</h3>
   <div class="grid">
-
-    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=500&q=60">
-    <img src="https://images.unsplash.com/photo-1619994403070-3fbe2f1fcd5c?auto=format&fit=crop&w=500&q=60">
-    <img src="https://images.unsplash.com/photo-1615634262417-2a7e9c9f2c18?auto=format&fit=crop&w=500&q=60">
-
+    <img src="https://picsum.photos/400?1">
+    <img src="https://picsum.photos/400?2">
+    <img src="https://picsum.photos/400?3">
   </div>
-</section>
 
-<!-- DEV -->
-<section id="dev">
-  <h2>Dasturlash</h2>
+  <h3>Dasturlash</h3>
   <div class="grid">
-
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=60">
-    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=60">
-    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=500&q=60">
-
+    <img src="https://picsum.photos/400?4">
+    <img src="https://picsum.photos/400?5">
+    <img src="https://picsum.photos/400?6">
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-  <h2>Aloqa</h2>
+  <h2 data-aos="fade-up">Bog‘lanish</h2>
 
-  <div class="links">
-    <a href="https://t.me/oddiy_ozosh" class="btn">📩 Telegram</a>
-    <a href="https://instagram.com/oddiy_ozosh" class="btn">📸 Instagram</a>
-    <a href="mailto:khasanovaozoda213@gmail.com" class="btn">📧 Email</a>
+  <div class="contact-box">
+    <a href="https://t.me/oddiy_ozosh" class="btn big">Telegram</a>
+    <a href="https://instagram.com/oddiy_ozosh" class="btn big">Instagram</a>
+    <a href="mailto:khasanovaozoda213@gmail.com" class="btn big">Email</a>
   </div>
 
-  <form class="form">
-    <input type="text" placeholder="Ismingiz" required>
-    <textarea placeholder="Fikringiz..." required></textarea>
-    <button type="submit">Yuborish</button>
+  <form class="form" data-aos="fade-up">
+    <input type="text" placeholder="Ismingiz">
+    <textarea placeholder="Fikringiz"></textarea>
+    <button class="btn big">Yuborish</button>
   </form>
-
 </section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-// smooth scroll
-document.querySelectorAll("a[href^='#']").forEach(anchor=>{
-  anchor.addEventListener("click",function(e){
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior:"smooth"
-    });
-  });
-});
+AOS.init();
+
+// Dark mode
+function toggleMode(){
+  document.body.classList.toggle("light");
+}
 </script>
 
 </body>
