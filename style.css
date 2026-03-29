@@ -4,7 +4,7 @@ body {
   background: linear-gradient(135deg, #0a001f, #1a0033, #6a00ff);
   color: white;
   transition: 0.3s;
-}
+} 
 
 /* LIGHT MODE */
 body.light {
