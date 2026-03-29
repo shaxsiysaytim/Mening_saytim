@@ -135,4 +135,44 @@ input, textarea {
   h1 {
     font-size: 22px;
   }
+} 
+/* MENU BUTTON */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* DEFAULT MENU */
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #1a0033;
+    width: 200px;
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }
